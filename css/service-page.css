@@ -1,0 +1,250 @@
+/* ================= SERVICE HERO ================= */
+
+.service-hero {
+    position: relative;
+    min-height: calc(92vh - var(--header-height));
+    display: grid;
+    align-items: end;
+    padding: clamp(90px, 10vw, 150px) 0 clamp(70px, 8vw, 110px);
+    overflow: hidden;
+}
+
+.service-hero-bg,
+.service-hero-bg img,
+.service-hero-overlay {
+    position: absolute;
+    inset: 0;
+}
+
+.service-hero-bg img {
+    width: 100%;
+    height: 100%;
+}
+
+.service-hero-overlay {
+    z-index: 1;
+    background:
+        linear-gradient(90deg, rgba(15, 17, 21, 0.88), rgba(15, 17, 21, 0.5), rgba(15, 17, 21, 0.9)),
+        linear-gradient(0deg, rgba(15, 17, 21, 0.96), rgba(15, 17, 21, 0.16));
+}
+
+.service-hero-grid {
+    position: relative;
+    z-index: 2;
+    display: grid;
+    grid-template-columns: minmax(0, 1fr) minmax(280px, 390px);
+    gap: clamp(30px, 5vw, 70px);
+    align-items: end;
+}
+
+.service-hero-copy p:not(.eyebrow) {
+    max-width: 650px;
+    margin-bottom: 30px;
+    color: rgba(246, 242, 234, 0.76);
+}
+
+.service-hero-actions {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 12px;
+}
+
+.service-hero-card {
+    padding: 26px;
+    border: 1px solid rgba(210, 186, 141, 0.34);
+    border-radius: 30px;
+    background:
+        linear-gradient(135deg, rgba(210, 186, 141, 0.14), rgba(255, 255, 255, 0.04)),
+        rgba(15, 17, 21, 0.78);
+    backdrop-filter: blur(18px);
+    box-shadow: var(--shadow-soft);
+}
+
+.service-hero-card span {
+    display: block;
+    margin-bottom: 12px;
+    color: var(--color-gold-soft);
+    font-weight: 900;
+    letter-spacing: 0.14em;
+    text-transform: uppercase;
+    font-size: 0.75rem;
+}
+
+.service-hero-card p {
+    margin: 0;
+}
+
+/* ================= SERVICE INTRO ================= */
+
+.service-intro {
+    background: linear-gradient(180deg, var(--color-bg), var(--color-bg-soft));
+}
+
+.service-intro-grid {
+    display: grid;
+    grid-template-columns: minmax(0, 0.9fr) minmax(320px, 1.1fr);
+    gap: clamp(34px, 6vw, 86px);
+}
+
+.service-rich-text {
+    padding: clamp(24px, 4vw, 38px);
+    border: 1px solid var(--color-line);
+    border-radius: 30px;
+    background:
+        linear-gradient(145deg, rgba(255, 255, 255, 0.065), rgba(255, 255, 255, 0.025)),
+        var(--color-surface);
+    box-shadow: var(--shadow-card);
+}
+
+.service-rich-text p {
+    font-size: clamp(1rem, 1.15vw, 1.12rem);
+}
+
+.service-rich-text p:last-child {
+    margin-bottom: 0;
+}
+
+/* ================= EVALUATION ================= */
+
+.service-evaluation {
+    background:
+        radial-gradient(circle at 85% 20%, rgba(184, 154, 99, 0.12), transparent 30rem),
+        #101217;
+}
+
+.service-factor-grid {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 14px;
+}
+
+.service-factor-grid article {
+    min-height: 300px;
+    display: grid;
+    align-content: end;
+    padding: 24px;
+    border: 1px solid var(--color-line);
+    border-radius: 28px;
+    background:
+        linear-gradient(145deg, rgba(255, 255, 255, 0.065), rgba(255, 255, 255, 0.025)),
+        var(--color-surface);
+    transition: 0.35s var(--ease);
+}
+
+.service-factor-grid article:hover {
+    transform: translateY(-6px);
+    border-color: rgba(210, 186, 141, 0.48);
+}
+
+.service-factor-grid svg {
+    width: 52px;
+    height: 52px;
+    margin-bottom: 44px;
+    padding: 14px;
+    border-radius: 18px;
+    color: var(--color-gold-soft);
+    background: rgba(210, 186, 141, 0.1);
+}
+
+.service-factor-grid h3 {
+    color: var(--color-ivory);
+}
+
+.service-factor-grid p {
+    margin: 0;
+    font-size: 0.94rem;
+}
+
+/* ================= FORM SECTION ================= */
+
+.service-form-section {
+    background:
+        linear-gradient(180deg, var(--color-bg-soft), var(--color-bg));
+}
+
+.service-form-grid {
+    display: grid;
+    grid-template-columns: minmax(0, 1fr) minmax(320px, 460px);
+    gap: clamp(30px, 6vw, 80px);
+    align-items: center;
+}
+
+.service-form-copy {
+    min-height: 500px;
+    display: grid;
+    align-content: center;
+    padding: clamp(28px, 5vw, 64px);
+    border: 1px solid var(--color-line);
+    border-radius: 38px;
+    overflow: hidden;
+    background:
+        linear-gradient(90deg, rgba(5, 6, 8, 0.9), rgba(5, 6, 8, 0.58)),
+        url("../assets/images/services/service-form-bg.jpg") center/cover;
+    box-shadow: var(--shadow-soft);
+}
+
+.service-form-copy p {
+    max-width: 580px;
+}
+
+/* ================= SERVICE REVEAL ================= */
+
+.service-reveal {
+    opacity: 0;
+    transform: translateY(28px);
+    transition:
+        opacity 0.75s var(--ease),
+        transform 0.75s var(--ease);
+}
+
+.service-reveal.is-visible {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+/* ================= RESPONSIVE ================= */
+
+@media (max-width: 1100px) {
+
+    .service-hero-grid,
+    .service-intro-grid,
+    .service-form-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .service-factor-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    .service-hero-card {
+        max-width: 720px;
+    }
+}
+
+@media (max-width: 760px) {
+    .service-hero {
+        min-height: auto;
+        padding-top: 84px;
+    }
+
+    .service-hero-actions {
+        display: grid;
+    }
+
+    .service-hero-actions .btn {
+        width: 100%;
+    }
+
+    .service-factor-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .service-factor-grid article {
+        min-height: 240px;
+    }
+
+    .service-form-copy {
+        min-height: 420px;
+        border-radius: 28px;
+    }
+}

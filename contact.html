@@ -1,0 +1,389 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <title>Contact Bathora | Request Bathroom Provider Options</title>
+
+    <meta name="description"
+        content="Contact Bathora to request local bathroom provider options for remodeling, shower installation, bathtub replacement, tile, vanity, and repair projects." />
+
+    <link rel="icon" href="assets/favicons/favicon.svg" type="image/svg+xml" />
+
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+        href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Cormorant+Garamond:wght@500;600&family=Manrope:wght@400;500;600;700;800&display=swap"
+        rel="stylesheet" />
+
+    <script src="https://unpkg.com/lucide@latest"></script>
+    <link rel="stylesheet" href="css/style.css" />
+</head>
+
+<body>
+    <a class="skip-link" href="#main">Skip to content</a>
+
+    <header class="site-header" data-header>
+        <div class="header-shell">
+            <a class="logo" href="index.html" aria-label="Bathora home">
+                <span class="logo-mark"><i data-lucide="droplets"></i></span>
+                <span class="logo-text" data-company-name>Bathora</span>
+            </a>
+
+            <div class="header-search" role="search">
+                <i data-lucide="search"></i>
+                <input type="search" placeholder="Search bathroom services..." aria-label="Search bathroom services" />
+            </div>
+
+            <div class="header-actions">
+                <a class="header-icon-link" href="mailto:hello@bathora.com" data-email-link aria-label="Email Bathora">
+                    <i data-lucide="mail"></i>
+                </a>
+
+                <a class="btn btn-small btn-gold" href="tel:+18776248472" data-phone-link>
+                    <i data-lucide="phone"></i>
+                    <span data-phone-label>Call Now</span>
+                </a>
+
+                <button class="menu-toggle" type="button" aria-label="Open menu" aria-expanded="false" data-menu-open>
+                    <span></span>
+                    <span></span>
+                </button>
+            </div>
+        </div>
+    </header>
+
+    <div class="menu-panel" data-menu-panel aria-hidden="true">
+        <div class="menu-panel-inner">
+            <div class="menu-panel-top">
+                <a class="logo" href="index.html">
+                    <span class="logo-mark"><i data-lucide="droplets"></i></span>
+                    <span data-company-name>Bathora</span>
+                </a>
+
+                <button class="menu-close" type="button" aria-label="Close menu" data-menu-close>
+                    <i data-lucide="x"></i>
+                </button>
+            </div>
+
+            <nav class="menu-nav" aria-label="Main menu">
+                <a href="index.html">Home</a>
+                <a href="services.html">Services</a>
+                <a href="about.html">About</a>
+                <a href="contact.html">Contact</a>
+            </nav>
+
+            <details class="menu-services" open>
+                <summary>
+                    Bathroom services
+                    <i data-lucide="chevron-down"></i>
+                </summary>
+
+                <div class="menu-service-list">
+                    <a href="bathroom-remodeling.html">Bathroom Remodeling</a>
+                    <a href="bathtub-replacement.html">Bathtub Replacement</a>
+                    <a href="shower-installation.html">Shower Installation</a>
+                    <a href="vanity-installation.html">Vanity Installation</a>
+                    <a href="tile-and-flooring.html">Tile & Flooring</a>
+                    <a href="bathroom-repair.html">Bathroom Repair</a>
+                </div>
+            </details>
+
+            <div class="menu-contact-card">
+                <span>Need provider options?</span>
+                <a href="tel:+18776248472" data-phone-link data-phone-label>Call Now</a>
+                <a href="mailto:hello@bathora.com" data-email-link data-email-text>hello@bathora.com</a>
+            </div>
+        </div>
+    </div>
+
+    <a class="mobile-callbar" href="tel:+18776248472" data-phone-link>
+        <i data-lucide="phone-call"></i>
+        <span data-phone-label>Call Now</span>
+    </a>
+
+    <main id="main">
+        <section class="contact-hero">
+            <div class="container contact-hero-grid">
+                <div class="contact-copy">
+                    <p class="eyebrow">
+                        <span></span>
+                        Request Options
+                    </p>
+
+                    <h1>Start with a clear bathroom project request.</h1>
+
+                    <p>
+                        Share the basics and Bathora can help route your request toward
+                        independent bathroom provider options where available.
+                    </p>
+
+                    <div class="contact-cards">
+                        <a href="tel:+18776248472" data-phone-link>
+                            <i data-lucide="phone-call"></i>
+                            <span>Phone</span>
+                            <strong data-phone-text>+1 (877) 624-8472</strong>
+                        </a>
+
+                        <a href="mailto:hello@bathora.com" data-email-link>
+                            <i data-lucide="mail"></i>
+                            <span>Email</span>
+                            <strong data-email-text>hello@bathora.com</strong>
+                        </a>
+                    </div>
+                </div>
+
+                <form class="quote-form contact-form" data-quote-form novalidate>
+                    <div class="form-badge">
+                        <i data-lucide="sparkles"></i>
+                        <span>Compact request form</span>
+                    </div>
+
+                    <div class="form-row">
+                        <label>
+                            <span>Name</span>
+                            <input type="text" name="name" placeholder="Your name" required />
+                        </label>
+
+                        <label>
+                            <span>Phone</span>
+                            <input type="tel" name="phone" placeholder="Phone number" required />
+                        </label>
+                    </div>
+
+                    <label>
+                        <span>Email</span>
+                        <input type="email" name="email" placeholder="Email address" required />
+                    </label>
+
+                    <label>
+                        <span>Project type</span>
+                        <select name="service" required>
+                            <option value="">Select project type</option>
+                            <option>Bathroom Remodeling</option>
+                            <option>Bathtub Replacement</option>
+                            <option>Shower Installation</option>
+                            <option>Vanity Installation</option>
+                            <option>Tile & Flooring</option>
+                            <option>Bathroom Repair</option>
+                        </select>
+                    </label>
+
+                    <div class="form-row">
+                        <label>
+                            <span>ZIP Code</span>
+                            <input type="text" name="zip" placeholder="ZIP code" required />
+                        </label>
+
+                        <label>
+                            <span>Timeline</span>
+                            <select name="timeline" required>
+                                <option value="">Choose</option>
+                                <option>As soon as possible</option>
+                                <option>Within 1 month</option>
+                                <option>1–3 months</option>
+                                <option>Just comparing options</option>
+                            </select>
+                        </label>
+                    </div>
+
+                    <label>
+                        <span>Short note</span>
+                        <textarea name="message"
+                            placeholder="Example: shower update, small bathroom, tile refresh..."></textarea>
+                    </label>
+
+                    <label class="custom-check">
+                        <input type="checkbox" name="consent" required />
+                        <span class="check-ui"></span>
+                        <small>
+                            I agree to be contacted about bathroom provider options. Providers are independent.
+                        </small>
+                    </label>
+
+                    <button class="btn btn-gold btn-full" type="submit">
+                        Request Provider Options
+                        <i data-lucide="arrow-up-right"></i>
+                    </button>
+
+                    <p class="form-message" data-form-message></p>
+                </form>
+            </div>
+        </section>
+
+        <section class="section contact-map-section">
+            <div class="container contact-map-grid">
+                <div class="map-copy">
+                    <p class="eyebrow">
+                        <span></span>
+                        Service Area
+                    </p>
+
+                    <h2>Provider availability depends on your location.</h2>
+
+                    <p>
+                        Bathora is designed for homeowners across select U.S. markets.
+                        Availability can vary by ZIP code, project type, and independent
+                        provider coverage.
+                    </p>
+
+                    <div class="map-notes">
+                        <article>
+                            <i data-lucide="map-pin"></i>
+                            <span>USA service-area matching</span>
+                        </article>
+
+                        <article>
+                            <i data-lucide="search-check"></i>
+                            <span>Project-type routing</span>
+                        </article>
+
+                        <article>
+                            <i data-lucide="shield-check"></i>
+                            <span>Homeowner verification recommended</span>
+                        </article>
+                    </div>
+                </div>
+
+                <div class="map-frame">
+                    <div class="map-topline">
+                        <span data-company-name>Bathora</span>
+                        <strong data-service-area>Serving homeowners across select U.S. markets</strong>
+                    </div>
+
+                    <iframe title="United States map" src="https://www.google.com/maps?q=United%20States&output=embed"
+                        loading="lazy" referrerpolicy="no-referrer-when-downgrade">
+                    </iframe>
+
+                    <div class="map-pin-card">
+                        <i data-lucide="navigation"></i>
+                        <div>
+                            <strong>Location-based matching</strong>
+                            <span>Enter your ZIP code in the request form.</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="section contact-steps">
+            <div class="container contact-steps-grid">
+                <article>
+                    <span>01</span>
+                    <h3>Send the basic request</h3>
+                    <p>Choose the bathroom project type and share your ZIP code.</p>
+                </article>
+
+                <article>
+                    <span>02</span>
+                    <h3>Review provider options</h3>
+                    <p>Compare available independent companies where matching is possible.</p>
+                </article>
+
+                <article>
+                    <span>03</span>
+                    <h3>Verify before hiring</h3>
+                    <p>Check license, insurance, quote details, timing, and written terms.</p>
+                </article>
+            </div>
+        </section>
+    </main>
+
+    <div class="cookie-banner" data-cookie-banner>
+        <div>
+            <strong>Privacy preferences</strong>
+            <p>
+                This site uses essential cookies and may use tracking technologies to improve form experience and
+                service matching.
+            </p>
+
+            <nav aria-label="Legal links">
+                <a href="privacy-policy.html">Privacy Policy</a>
+                <a href="cookie-policy.html">Cookie Policy</a>
+                <a href="terms-of-service.html">Terms of Service</a>
+            </nav>
+        </div>
+
+        <div class="cookie-actions">
+            <button class="btn btn-ghost" type="button" data-cookie-decline>Decline</button>
+            <button class="btn btn-gold" type="button" data-cookie-accept>Accept</button>
+        </div>
+    </div>
+
+    <footer class="site-footer">
+        <div class="container footer-grid">
+            <div class="footer-brand">
+                <a class="logo" href="index.html">
+                    <span class="logo-mark"><i data-lucide="droplets"></i></span>
+                    <span data-company-name>Bathora</span>
+                </a>
+
+                <p data-footer-text>
+                    Bathora is an independent bathroom project matching platform helping homeowners compare local
+                    providers.
+                </p>
+
+                <p class="footer-area" data-service-area>
+                    Serving homeowners across select U.S. markets
+                </p>
+            </div>
+
+            <nav class="footer-nav" aria-label="Footer navigation">
+                <h3>Pages</h3>
+                <a href="index.html">Home</a>
+                <a href="services.html">Services</a>
+                <a href="about.html">About</a>
+                <a href="contact.html">Contact</a>
+            </nav>
+
+            <nav class="footer-nav" aria-label="Service links">
+                <h3>Services</h3>
+                <a href="bathroom-remodeling.html">Bathroom Remodeling</a>
+                <a href="bathtub-replacement.html">Bathtub Replacement</a>
+                <a href="shower-installation.html">Shower Installation</a>
+                <a href="vanity-installation.html">Vanity Installation</a>
+                <a href="tile-and-flooring.html">Tile & Flooring</a>
+                <a href="bathroom-repair.html">Bathroom Repair</a>
+            </nav>
+
+            <nav class="footer-nav" aria-label="Legal links">
+                <h3>Legal</h3>
+                <a href="privacy-policy.html">Privacy Policy</a>
+                <a href="cookie-policy.html">Cookie Policy</a>
+                <a href="terms-of-service.html">Terms of Service</a>
+            </nav>
+        </div>
+
+        <div class="container footer-disclaimer">
+            <p data-disclaimer>
+                Disclaimer: This site is a free service to assist homeowners in connecting with local service providers.
+                All contractors/providers are independent and this site does not warrant or guarantee any work
+                performed. It is the responsibility of the homeowner to verify that the hired contractor furnishes the
+                necessary license and insurance required for the work being performed. All persons depicted in a photo
+                or video are actors or models and not contractors listed on this site.
+            </p>
+        </div>
+
+        <div class="container footer-bottom">
+            <p>
+                © <span data-year></span>
+                <span data-company-name>Bathora</span>.
+                <span data-company-address>1287 Cedar Grove Ave, Suite 204, Austin, TX 78704</span>.
+                <span data-company-id>ID 48-29174</span>.
+            </p>
+
+            <a href="tel:+18776248472" data-phone-link data-phone-text>
+                +1 (877) 624-8472
+            </a>
+        </div>
+    </footer>
+
+    <script src="js/settings.js"></script>
+    <script src="js/site-content.js"></script>
+    <script src="js/main.js"></script>
+    <script src="js/contact.js"></script>
+</body>
+
+</html>

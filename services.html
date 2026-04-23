@@ -1,0 +1,490 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <title>Bathroom Services | Bathora</title>
+
+    <meta name="description"
+        content="Explore bathroom service categories and compare local providers for remodeling, bathtub replacement, shower installation, vanity installation, tile work, and bathroom repairs." />
+
+    <link rel="icon" href="assets/favicons/favicon.svg" type="image/svg+xml" />
+
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+        href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Cormorant+Garamond:wght@500;600&family=Manrope:wght@400;500;600;700;800&display=swap"
+        rel="stylesheet" />
+
+    <script src="https://unpkg.com/lucide@latest"></script>
+
+    <link rel="stylesheet" href="css/style.css" />
+</head>
+
+<body>
+    <a class="skip-link" href="#main">Skip to content</a>
+
+    <header class="site-header" data-header>
+        <div class="header-shell">
+            <a class="logo" href="index.html" aria-label="Bathora home">
+                <span class="logo-mark"><i data-lucide="droplets"></i></span>
+                <span class="logo-text" data-company-name>Bathora</span>
+            </a>
+
+            <div class="header-search" role="search">
+                <i data-lucide="search"></i>
+                <input type="search" placeholder="Search bathroom services..." aria-label="Search bathroom services" />
+            </div>
+
+            <div class="header-actions">
+                <a class="header-icon-link" href="mailto:hello@bathora.com" data-email-link aria-label="Email Bathora">
+                    <i data-lucide="mail"></i>
+                </a>
+
+                <a class="btn btn-small btn-gold" href="tel:+18776248472" data-phone-link>
+                    <i data-lucide="phone"></i>
+                    <span data-phone-label>Call Now</span>
+                </a>
+
+                <button class="menu-toggle" type="button" aria-label="Open menu" aria-expanded="false" data-menu-open>
+                    <span></span>
+                    <span></span>
+                </button>
+            </div>
+        </div>
+    </header>
+
+    <div class="menu-panel" data-menu-panel aria-hidden="true">
+        <div class="menu-panel-inner">
+            <div class="menu-panel-top">
+                <a class="logo" href="index.html">
+                    <span class="logo-mark"><i data-lucide="droplets"></i></span>
+                    <span data-company-name>Bathora</span>
+                </a>
+
+                <button class="menu-close" type="button" aria-label="Close menu" data-menu-close>
+                    <i data-lucide="x"></i>
+                </button>
+            </div>
+
+            <nav class="menu-nav" aria-label="Main menu">
+                <a href="index.html">Home</a>
+                <a href="services.html">Services</a>
+                <a href="about.html">About</a>
+                <a href="contact.html">Contact</a>
+            </nav>
+
+            <details class="menu-services" open>
+                <summary>
+                    Bathroom services
+                    <i data-lucide="chevron-down"></i>
+                </summary>
+
+                <div class="menu-service-list">
+                    <a href="bathroom-remodeling.html">Bathroom Remodeling</a>
+                    <a href="bathtub-replacement.html">Bathtub Replacement</a>
+                    <a href="shower-installation.html">Shower Installation</a>
+                    <a href="vanity-installation.html">Vanity Installation</a>
+                    <a href="tile-and-flooring.html">Tile & Flooring</a>
+                    <a href="bathroom-repair.html">Bathroom Repair</a>
+                </div>
+            </details>
+
+            <div class="menu-contact-card">
+                <span>Need provider options?</span>
+                <a href="tel:+18776248472" data-phone-link data-phone-label>Call Now</a>
+                <a href="mailto:hello@bathora.com" data-email-link data-email-text>hello@bathora.com</a>
+            </div>
+        </div>
+    </div>
+
+    <a class="mobile-callbar" href="tel:+18776248472" data-phone-link>
+        <i data-lucide="phone-call"></i>
+        <span data-phone-label>Call Now</span>
+    </a>
+
+    <main id="main">
+        <!-- ================= SERVICES HERO ================= -->
+        <section class="services-hero">
+            <div class="container services-hero-grid">
+                <div class="services-hero-copy">
+                    <p class="eyebrow">
+                        <span></span>
+                        Bathroom Provider Categories
+                    </p>
+
+                    <h1>Compare bathroom options by project type.</h1>
+
+                    <p>
+                        Bathora organizes common bathroom projects into clear categories so
+                        homeowners can review local provider options without assuming every
+                        company handles every scope.
+                    </p>
+
+                    <div class="services-hero-actions">
+                        <a class="btn btn-gold" href="contact.html">
+                            Request Provider Options
+                            <i data-lucide="arrow-up-right"></i>
+                        </a>
+
+                        <a class="btn btn-ghost" href="#service-directory">
+                            Browse Categories
+                        </a>
+                    </div>
+                </div>
+
+                <div class="services-hero-panel">
+                    <div class="services-hero-image">
+                        <img src="assets/images/services/services-hero.jpg"
+                            alt="Premium bathroom interior with modern fixtures" />
+                    </div>
+
+                    <div class="services-mini-card">
+                        <i data-lucide="layout-grid"></i>
+                        <div>
+                            <strong>6 service paths</strong>
+                            <span>One comparison-first structure</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- ================= SERVICE DIRECTORY ================= -->
+        <section class="section services-directory" id="service-directory">
+            <div class="container">
+                <div class="section-heading split-heading">
+                    <div>
+                        <p class="eyebrow">
+                            <span></span>
+                            Directory
+                        </p>
+                        <h2>Choose the project category closest to your bathroom plan.</h2>
+                    </div>
+
+                    <p>
+                        Each page explains what homeowners usually compare before speaking
+                        with independent bathroom companies.
+                    </p>
+                </div>
+
+                <div class="services-filter" aria-label="Service filters">
+                    <button class="is-active" type="button" data-service-filter="all">All</button>
+                    <button type="button" data-service-filter="upgrade">Upgrades</button>
+                    <button type="button" data-service-filter="fixture">Fixtures</button>
+                    <button type="button" data-service-filter="surface">Surfaces</button>
+                    <button type="button" data-service-filter="repair">Repair</button>
+                </div>
+
+                <div class="services-card-grid">
+                    <a class="service-directory-card" href="bathroom-remodeling.html" data-service-category="upgrade">
+                        <img src="assets/images/services/bathroom-remodeling.jpg" alt="Bathroom remodeling category" />
+                        <div class="service-card-overlay">
+                            <span>Upgrade path</span>
+                            <h3>Bathroom Remodeling</h3>
+                            <p>For homeowners comparing companies for layout, finish, fixture, and design updates.</p>
+                            <strong>View category <i data-lucide="arrow-up-right"></i></strong>
+                        </div>
+                    </a>
+
+                    <a class="service-directory-card" href="bathtub-replacement.html" data-service-category="fixture">
+                        <img src="assets/images/services/bathtub-replacement.jpg" alt="Bathtub replacement category" />
+                        <div class="service-card-overlay">
+                            <span>Fixture path</span>
+                            <h3>Bathtub Replacement</h3>
+                            <p>For replacing old tubs, comparing material options, access needs, and provider
+                                availability.</p>
+                            <strong>View category <i data-lucide="arrow-up-right"></i></strong>
+                        </div>
+                    </a>
+
+                    <a class="service-directory-card" href="shower-installation.html" data-service-category="fixture">
+                        <img src="assets/images/services/shower-installation.jpg" alt="Shower installation category" />
+                        <div class="service-card-overlay">
+                            <span>Fixture path</span>
+                            <h3>Shower Installation</h3>
+                            <p>For walk-in showers, replacement shower systems, glass, tile, and enclosure options.</p>
+                            <strong>View category <i data-lucide="arrow-up-right"></i></strong>
+                        </div>
+                    </a>
+
+                    <a class="service-directory-card" href="vanity-installation.html" data-service-category="upgrade">
+                        <img src="assets/images/services/vanity-installation.jpg" alt="Vanity installation category" />
+                        <div class="service-card-overlay">
+                            <span>Upgrade path</span>
+                            <h3>Vanity Installation</h3>
+                            <p>For sink, storage, countertop, mirror, and bathroom furniture-related provider options.
+                            </p>
+                            <strong>View category <i data-lucide="arrow-up-right"></i></strong>
+                        </div>
+                    </a>
+
+                    <a class="service-directory-card" href="tile-and-flooring.html" data-service-category="surface">
+                        <img src="assets/images/services/tile-flooring.jpg" alt="Tile and flooring category" />
+                        <div class="service-card-overlay">
+                            <span>Surface path</span>
+                            <h3>Tile & Flooring</h3>
+                            <p>For bathroom floor tile, wall tile, waterproofing considerations, and surface updates.
+                            </p>
+                            <strong>View category <i data-lucide="arrow-up-right"></i></strong>
+                        </div>
+                    </a>
+
+                    <a class="service-directory-card" href="bathroom-repair.html" data-service-category="repair">
+                        <img src="assets/images/services/bathroom-repair.jpg" alt="Bathroom repair category" />
+                        <div class="service-card-overlay">
+                            <span>Repair path</span>
+                            <h3>Bathroom Repair</h3>
+                            <p>For repair-focused projects where homeowners want to compare provider availability.</p>
+                            <strong>View category <i data-lucide="arrow-up-right"></i></strong>
+                        </div>
+                    </a>
+                </div>
+            </div>
+        </section>
+
+        <!-- ================= COMPARE STRIP ================= -->
+        <section class="section compare-strip">
+            <div class="container compare-strip-grid">
+                <div>
+                    <p class="eyebrow">
+                        <span></span>
+                        Why Compare
+                    </p>
+                    <h2>Bathroom providers can differ by scope, timing, and materials.</h2>
+                </div>
+
+                <div class="compare-points">
+                    <article>
+                        <i data-lucide="ruler"></i>
+                        <h3>Project scope</h3>
+                        <p>Some companies focus on full remodels, while others handle fixture or surface-focused work.
+                        </p>
+                    </article>
+
+                    <article>
+                        <i data-lucide="calendar-clock"></i>
+                        <h3>Availability</h3>
+                        <p>Provider timelines may vary by area, season, project size, and material availability.</p>
+                    </article>
+
+                    <article>
+                        <i data-lucide="badge-check"></i>
+                        <h3>Verification</h3>
+                        <p>Homeowners should review licensing, insurance, quote details, and company policies before
+                            hiring.</p>
+                    </article>
+                </div>
+            </div>
+        </section>
+
+        <!-- ================= CTA ================= -->
+        <section class="section services-cta">
+            <div class="container services-cta-box">
+                <div>
+                    <p class="eyebrow">
+                        <span></span>
+                        Next Step
+                    </p>
+                    <h2>Ready to request bathroom provider options?</h2>
+                    <p>
+                        Share your project category and ZIP code. Bathora helps route your
+                        request toward relevant independent providers where available.
+                    </p>
+                </div>
+
+                <a class="btn btn-gold" href="contact.html">
+                    Start Request
+                    <i data-lucide="arrow-up-right"></i>
+                </a>
+            </div>
+        </section>
+
+        <!-- ================= FAQ ================= -->
+        <section class="section faq-section">
+            <div class="container faq-grid">
+                <div>
+                    <p class="eyebrow">
+                        <span></span>
+                        FAQ
+                    </p>
+                    <h2>Questions about bathroom service categories.</h2>
+                </div>
+
+                <div class="faq-list">
+                    <details>
+                        <summary>How do I know which category to choose?</summary>
+                        <p>
+                            Choose the category closest to your main project goal. If your project includes several
+                            areas,
+                            bathroom remodeling is usually the broadest category.
+                        </p>
+                    </details>
+
+                    <details>
+                        <summary>Does every provider handle every bathroom service?</summary>
+                        <p>
+                            No. Independent companies may specialize in different project types, materials, or service
+                            areas.
+                        </p>
+                    </details>
+
+                    <details>
+                        <summary>Can I request quotes for more than one category?</summary>
+                        <p>
+                            Yes. If your project includes multiple needs, describe them clearly when submitting your
+                            request.
+                        </p>
+                    </details>
+
+                    <details>
+                        <summary>What should I verify before hiring?</summary>
+                        <p>
+                            Verify license, insurance, written quote details, warranty terms, timing, and the company’s
+                            service area.
+                        </p>
+                    </details>
+                </div>
+            </div>
+
+            <script type="application/ld+json">
+        {
+          "@context": "https://schema.org",
+          "@type": "FAQPage",
+          "mainEntity": [
+            {
+              "@type": "Question",
+              "name": "How do I know which category to choose?",
+              "acceptedAnswer": {
+                "@type": "Answer",
+                "text": "Choose the category closest to your main project goal. If your project includes several areas, bathroom remodeling is usually the broadest category."
+              }
+            },
+            {
+              "@type": "Question",
+              "name": "Does every provider handle every bathroom service?",
+              "acceptedAnswer": {
+                "@type": "Answer",
+                "text": "No. Independent companies may specialize in different project types, materials, or service areas."
+              }
+            },
+            {
+              "@type": "Question",
+              "name": "Can I request quotes for more than one category?",
+              "acceptedAnswer": {
+                "@type": "Answer",
+                "text": "Yes. If your project includes multiple needs, describe them clearly when submitting your request."
+              }
+            },
+            {
+              "@type": "Question",
+              "name": "What should I verify before hiring?",
+              "acceptedAnswer": {
+                "@type": "Answer",
+                "text": "Verify license, insurance, written quote details, warranty terms, timing, and the company’s service area."
+              }
+            }
+          ]
+        }
+      </script>
+        </section>
+    </main>
+
+    <div class="cookie-banner" data-cookie-banner>
+        <div>
+            <strong>Privacy preferences</strong>
+            <p>
+                This site uses essential cookies and may use tracking technologies to improve form experience and
+                service matching.
+            </p>
+
+            <nav aria-label="Legal links">
+                <a href="privacy-policy.html">Privacy Policy</a>
+                <a href="cookie-policy.html">Cookie Policy</a>
+                <a href="terms-of-service.html">Terms of Service</a>
+            </nav>
+        </div>
+
+        <div class="cookie-actions">
+            <button class="btn btn-ghost" type="button" data-cookie-decline>Decline</button>
+            <button class="btn btn-gold" type="button" data-cookie-accept>Accept</button>
+        </div>
+    </div>
+
+    <footer class="site-footer">
+        <div class="container footer-grid">
+            <div class="footer-brand">
+                <a class="logo" href="index.html">
+                    <span class="logo-mark"><i data-lucide="droplets"></i></span>
+                    <span data-company-name>Bathora</span>
+                </a>
+
+                <p data-footer-text>
+                    Bathora is an independent bathroom project matching platform helping homeowners compare local
+                    providers.
+                </p>
+
+                <p class="footer-area" data-service-area>
+                    Serving homeowners across select U.S. markets
+                </p>
+            </div>
+
+            <nav class="footer-nav" aria-label="Footer navigation">
+                <h3>Pages</h3>
+                <a href="index.html">Home</a>
+                <a href="services.html">Services</a>
+                <a href="about.html">About</a>
+                <a href="contact.html">Contact</a>
+            </nav>
+
+            <nav class="footer-nav" aria-label="Service links">
+                <h3>Services</h3>
+                <a href="bathroom-remodeling.html">Bathroom Remodeling</a>
+                <a href="bathtub-replacement.html">Bathtub Replacement</a>
+                <a href="shower-installation.html">Shower Installation</a>
+                <a href="vanity-installation.html">Vanity Installation</a>
+                <a href="tile-and-flooring.html">Tile & Flooring</a>
+                <a href="bathroom-repair.html">Bathroom Repair</a>
+            </nav>
+
+            <nav class="footer-nav" aria-label="Legal links">
+                <h3>Legal</h3>
+                <a href="privacy-policy.html">Privacy Policy</a>
+                <a href="cookie-policy.html">Cookie Policy</a>
+                <a href="terms-of-service.html">Terms of Service</a>
+            </nav>
+        </div>
+
+        <div class="container footer-disclaimer">
+            <p data-disclaimer>
+                Disclaimer: This site is a free service to assist homeowners in connecting with local service providers.
+                All contractors/providers are independent and this site does not warrant or guarantee any work
+                performed. It is the responsibility of the homeowner to verify that the hired contractor furnishes the
+                necessary license and insurance required for the work being performed. All persons depicted in a photo
+                or video are actors or models and not contractors listed on this site.
+            </p>
+        </div>
+
+        <div class="container footer-bottom">
+            <p>
+                © <span data-year></span>
+                <span data-company-name>Bathora</span>.
+                <span data-company-address>1287 Cedar Grove Ave, Suite 204, Austin, TX 78704</span>.
+                <span data-company-id>ID 48-29174</span>.
+            </p>
+
+            <a href="tel:+18776248472" data-phone-link data-phone-text>
+                +1 (877) 624-8472
+            </a>
+        </div>
+    </footer>
+
+    <script src="js/settings.js"></script>
+    <script src="js/site-content.js"></script>
+    <script src="js/main.js"></script>
+    <script src="js/services.js"></script>
+</body>
+
+</html>

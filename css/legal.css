@@ -1,0 +1,124 @@
+/* ================= LEGAL PAGES ================= */
+
+.legal-hero {
+    padding: clamp(90px, 10vw, 140px) 0 60px;
+    background:
+        radial-gradient(circle at 80% 20%, rgba(184, 154, 99, 0.13), transparent 30rem),
+        linear-gradient(180deg, #101217, var(--color-bg));
+}
+
+.legal-hero h1 {
+    max-width: 900px;
+}
+
+.legal-hero p {
+    max-width: 680px;
+}
+
+.legal-layout {
+    padding: 40px 0 clamp(80px, 8vw, 130px);
+    background: var(--color-bg);
+}
+
+.legal-grid {
+    display: grid;
+    grid-template-columns: 280px minmax(0, 1fr);
+    gap: clamp(28px, 5vw, 70px);
+    align-items: start;
+}
+
+.legal-nav {
+    position: sticky;
+    top: 110px;
+    display: grid;
+    gap: 10px;
+    padding: 18px;
+    border: 1px solid var(--color-line);
+    border-radius: 24px;
+    background: rgba(255, 255, 255, 0.035);
+}
+
+.legal-nav a {
+    padding: 12px 14px;
+    border-radius: 14px;
+    color: var(--color-text-muted);
+    font-weight: 800;
+    transition: 0.25s var(--ease);
+}
+
+.legal-nav a:hover {
+    color: var(--color-black);
+    background: var(--color-gold-soft);
+}
+
+.legal-content {
+    padding: clamp(24px, 4vw, 46px);
+    border: 1px solid var(--color-line);
+    border-radius: 34px;
+    background:
+        linear-gradient(145deg, rgba(255, 255, 255, 0.06), rgba(255, 255, 255, 0.025)),
+        var(--color-surface);
+    box-shadow: var(--shadow-card);
+}
+
+.legal-content section+section {
+    margin-top: 34px;
+    padding-top: 34px;
+    border-top: 1px solid var(--color-line);
+}
+
+.legal-content h2 {
+    margin-bottom: 14px;
+    font-size: clamp(2rem, 3vw, 3.4rem);
+}
+
+.legal-content h3 {
+    margin-top: 24px;
+    color: var(--color-ivory);
+}
+
+.legal-content p,
+.legal-content li {
+    color: var(--color-text-muted);
+    line-height: 1.7;
+}
+
+.legal-content ul {
+    padding-left: 20px;
+}
+
+.legal-note {
+    margin-top: 28px;
+    padding: 18px;
+    border: 1px solid rgba(210, 186, 141, 0.3);
+    border-radius: 20px;
+    background: rgba(210, 186, 141, 0.08);
+}
+
+.legal-note p {
+    margin: 0;
+    font-size: 0.9rem;
+}
+
+.legal-reveal {
+    opacity: 0;
+    transform: translateY(24px);
+    transition:
+        opacity 0.7s var(--ease),
+        transform 0.7s var(--ease);
+}
+
+.legal-reveal.is-visible {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+@media (max-width: 900px) {
+    .legal-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .legal-nav {
+        position: static;
+    }
+}
