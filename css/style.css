@@ -1027,3 +1027,139 @@ textarea:focus {
         grid-template-columns: 1fr;
     }
 }
+
+/* ================= SMART CTA / RIPPLE UPGRADE ================= */
+
+.btn-gold {
+    position: relative;
+    overflow: hidden;
+}
+
+.btn-ripple {
+    position: absolute;
+    width: 14px;
+    height: 14px;
+    pointer-events: none;
+    border-radius: 999px;
+    background: rgba(255, 255, 255, 0.58);
+    transform: translate(-50%, -50%) scale(0);
+    animation: btnRipple 0.65s var(--ease) forwards;
+}
+
+@keyframes btnRipple {
+    to {
+        opacity: 0;
+        transform: translate(-50%, -50%) scale(18);
+    }
+}
+
+/* ================= SMART STICKY CTA ================= */
+
+.smart-sticky-cta {
+    position: fixed;
+    left: 50%;
+    bottom: 22px;
+    z-index: 850;
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    width: min(calc(100% - 32px), 560px);
+    padding: 10px 10px 10px 18px;
+    border: 1px solid rgba(210, 186, 141, 0.34);
+    border-radius: 999px;
+    background:
+        linear-gradient(135deg, rgba(210, 186, 141, 0.16), rgba(255, 255, 255, 0.055)),
+        rgba(15, 17, 21, 0.88);
+    backdrop-filter: blur(18px);
+    box-shadow: 0 18px 60px rgba(0, 0, 0, 0.38);
+    transform: translate(-50%, 130%);
+    opacity: 0;
+    pointer-events: none;
+    transition:
+        opacity 0.35s var(--ease),
+        transform 0.35s var(--ease);
+}
+
+.smart-sticky-cta.is-visible {
+    opacity: 1;
+    pointer-events: auto;
+    transform: translate(-50%, 0);
+}
+
+.smart-sticky-cta__icon {
+    width: 42px;
+    height: 42px;
+    flex: 0 0 42px;
+    display: grid;
+    place-items: center;
+    border-radius: 999px;
+    color: var(--color-gold-soft);
+    background: rgba(210, 186, 141, 0.12);
+}
+
+.smart-sticky-cta__icon svg {
+    width: 19px;
+    height: 19px;
+}
+
+.smart-sticky-cta__content {
+    min-width: 0;
+    flex: 1;
+}
+
+.smart-sticky-cta__content strong {
+    display: block;
+    color: var(--color-ivory);
+    font-size: 0.92rem;
+    line-height: 1.2;
+}
+
+.smart-sticky-cta__content span {
+    display: block;
+    margin-top: 2px;
+    color: var(--color-text-muted);
+    font-size: 0.78rem;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+
+.smart-sticky-cta .btn {
+    min-height: 42px;
+    padding-inline: 16px;
+    font-size: 0.82rem;
+}
+
+/* чтобы cookie banner и mobile call не конфликтовали */
+.cookie-banner:not(.is-hidden)~.site-footer+.smart-sticky-cta,
+.cookie-banner:not(.is-hidden)+.site-footer+.smart-sticky-cta {
+    bottom: 130px;
+}
+
+/* ================= CTA MOBILE ================= */
+
+@media (max-width: 820px) {
+    .smart-sticky-cta {
+        bottom: 84px;
+        border-radius: 24px;
+    }
+
+    .smart-sticky-cta .btn {
+        display: none;
+    }
+
+    .smart-sticky-cta__content strong {
+        font-size: 0.88rem;
+    }
+}
+
+@media (max-width: 480px) {
+    .smart-sticky-cta {
+        align-items: center;
+        padding: 12px;
+    }
+
+    .smart-sticky-cta__content span {
+        white-space: normal;
+    }
+}

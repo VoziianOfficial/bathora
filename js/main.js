@@ -50,9 +50,7 @@ function initMenu() {
     closeBtn.addEventListener("click", closeMenu);
 
     panel.addEventListener("click", (event) => {
-        if (event.target === panel) {
-            closeMenu();
-        }
+        if (event.target === panel) closeMenu();
     });
 
     menuLinks.forEach((link) => {
@@ -177,18 +175,13 @@ function initHeaderSearch() {
         if (event.key !== "Enter") return;
 
         const value = searchInput.value.trim().toLowerCase();
-
         if (!value) return;
 
         const match = servicePages.find((page) =>
             page.keywords.some((keyword) => value.includes(keyword))
         );
 
-        if (match) {
-            window.location.href = match.url;
-        } else {
-            window.location.href = "services.html";
-        }
+        window.location.href = match ? match.url : "services.html";
     });
 }
 
@@ -214,6 +207,48 @@ function initFaqDetails() {
     });
 }
 
+/* ================= SMART STICKY CTA ================= */
+
+function initSmartStickyCTA() {
+    const stickyCta = document.querySelector("[data-smart-sticky-cta]");
+    const hero = document.querySelector(".hero, .service-hero, .services-hero, .about-hero, .contact-hero, .legal-hero");
+
+    if (!stickyCta) return;
+
+    const toggleStickyCTA = () => {
+        const triggerPoint = hero ? hero.offsetHeight * 0.65 : 420;
+        const shouldShow = window.scrollY > triggerPoint;
+
+        stickyCta.classList.toggle("is-visible", shouldShow);
+    };
+
+    toggleStickyCTA();
+    window.addEventListener("scroll", toggleStickyCTA, { passive: true });
+}
+
+/* ================= CTA RIPPLE ================= */
+
+function initCTARipple() {
+    const buttons = document.querySelectorAll(".btn-gold");
+
+    buttons.forEach((button) => {
+        button.addEventListener("pointerdown", (event) => {
+            const rect = button.getBoundingClientRect();
+            const ripple = document.createElement("span");
+
+            ripple.className = "btn-ripple";
+            ripple.style.left = `${event.clientX - rect.left}px`;
+            ripple.style.top = `${event.clientY - rect.top}px`;
+
+            button.appendChild(ripple);
+
+            window.setTimeout(() => {
+                ripple.remove();
+            }, 650);
+        });
+    });
+}
+
 /* ================= INIT ================= */
 
 document.addEventListener("DOMContentLoaded", () => {
@@ -224,4 +259,6 @@ document.addEventListener("DOMContentLoaded", () => {
     initForms();
     initHeaderSearch();
     initFaqDetails();
+    initSmartStickyCTA();
+    initCTARipple();
 });
