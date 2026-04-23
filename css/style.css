@@ -1163,3 +1163,154 @@ textarea:focus {
         white-space: normal;
     }
 }
+
+/* ================= MULTI STEP FORM ================= */
+
+.multistep-form {
+    position: relative;
+    overflow: hidden;
+}
+
+.form-progress {
+    height: 6px;
+    margin-bottom: 20px;
+    overflow: hidden;
+    border-radius: 999px;
+    background: rgba(255, 255, 255, 0.08);
+}
+
+.form-progress span {
+    display: block;
+    width: 33.333%;
+    height: 100%;
+    border-radius: inherit;
+    background: linear-gradient(135deg, var(--color-gold-soft), var(--color-gold));
+    transition: width 0.35s var(--ease);
+}
+
+.form-step {
+    display: none;
+    animation: formStepIn 0.35s var(--ease);
+}
+
+.form-step.is-active {
+    display: block;
+}
+
+@keyframes formStepIn {
+    from {
+        opacity: 0;
+        transform: translateY(14px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+.form-step-title {
+    margin-bottom: 18px;
+}
+
+.form-step-title span {
+    display: inline-flex;
+    margin-bottom: 8px;
+    color: var(--color-gold-soft);
+    font-size: 0.76rem;
+    font-weight: 900;
+    letter-spacing: 0.14em;
+    text-transform: uppercase;
+}
+
+.form-step-title h3 {
+    margin-bottom: 6px;
+    color: var(--color-ivory);
+    font-size: clamp(1.35rem, 2vw, 1.8rem);
+}
+
+.form-step-title p {
+    margin: 0;
+    font-size: 0.9rem;
+}
+
+.choice-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 12px;
+}
+
+.choice-card {
+    position: relative;
+    cursor: pointer;
+}
+
+.choice-card input {
+    position: absolute;
+    opacity: 0;
+    pointer-events: none;
+}
+
+.choice-card span {
+    min-height: 84px;
+    display: grid;
+    align-content: center;
+    gap: 6px;
+    padding: 16px;
+    border: 1px solid var(--color-line);
+    border-radius: 18px;
+    color: var(--color-ivory);
+    background: rgba(255, 255, 255, 0.035);
+    font-size: 0.92rem;
+    font-weight: 800;
+    line-height: 1.25;
+    transition: 0.3s var(--ease);
+}
+
+.choice-card span::before {
+    content: "";
+    width: 22px;
+    height: 22px;
+    border: 1px solid rgba(210, 186, 141, 0.45);
+    border-radius: 999px;
+    background: rgba(5, 6, 8, 0.35);
+}
+
+.choice-card input:checked+span {
+    border-color: rgba(210, 186, 141, 0.85);
+    background: rgba(210, 186, 141, 0.12);
+    box-shadow: inset 0 0 0 1px rgba(210, 186, 141, 0.25);
+}
+
+.choice-card input:checked+span::before {
+    border: 6px solid var(--color-gold-soft);
+    background: #111;
+}
+
+.form-actions {
+    display: flex;
+    gap: 10px;
+    margin-top: 18px;
+}
+
+.form-actions .btn {
+    flex: 1;
+}
+
+.is-invalid {
+    border-color: rgba(255, 120, 110, 0.8) !important;
+}
+
+.choice-card input.is-invalid+span {
+    border-color: rgba(255, 120, 110, 0.8);
+}
+
+@media (max-width: 560px) {
+    .choice-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .form-actions {
+        display: grid;
+    }
+}
