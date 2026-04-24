@@ -2,7 +2,7 @@
 
 .services-hero {
     position: relative;
-    padding: clamp(84px, 8vw, 118px) 0 clamp(48px, 6vw, 76px);
+    padding: clamp(76px, 7vw, 104px) 0 clamp(40px, 5vw, 62px);
     overflow: hidden;
     background:
         radial-gradient(circle at 78% 18%, rgba(210, 186, 141, 0.14), transparent 28rem),
@@ -36,8 +36,16 @@
 
 .services-hero-copy p:not(.eyebrow) {
     max-width: 590px;
-    margin-bottom: 24px;
+    margin-bottom: 16px;
     font-size: clamp(1rem, 1.12vw, 1.1rem);
+}
+
+.services-hero-copy .services-hero-sub {
+    margin-top: 0;
+    margin-bottom: 26px;
+    color: rgba(246, 242, 234, 0.66);
+    font-size: 0.95rem;
+    line-height: 1.55;
 }
 
 .services-hero-actions {
@@ -48,7 +56,7 @@
 
 .services-hero-visual {
     position: relative;
-    min-height: 420px;
+    min-height: 360px;
 }
 
 .services-hero-visual img {
@@ -459,8 +467,34 @@
         grid-template-columns: 1fr;
     }
 
+    .services-hero-shell {
+        align-items: start;
+    }
+
     .services-hero-visual {
+        width: min(100%, 720px);
         max-width: 720px;
+        margin-inline: auto;
+        margin-top: 10px;
+        min-height: auto;
+        display: grid;
+        gap: 14px;
+    }
+
+    .services-hero-visual img,
+    .hero-visual-card,
+    .hero-visual-card-main,
+    .hero-visual-card-note {
+        position: relative;
+        inset: auto;
+        width: 100%;
+    }
+
+    .services-hero-visual img {
+        right: auto;
+        top: auto;
+        height: auto;
+        aspect-ratio: 16 / 10;
     }
 
     .services-card-grid {
