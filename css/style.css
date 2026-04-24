@@ -151,16 +151,16 @@ textarea {
 }
 
 .section {
-    padding: clamp(76px, 9vw, 140px) 0;
+    padding: clamp(68px, 7vw, 120px) 0;
 }
 
 .eyebrow {
     display: inline-flex;
     align-items: center;
     gap: 10px;
-    margin: 0 0 18px;
+    margin: 0 0 14px;
     color: var(--color-gold-soft);
-    font-size: 0.78rem;
+    font-size: 0.76rem;
     font-weight: 800;
     letter-spacing: 0.16em;
     text-transform: uppercase;
@@ -185,10 +185,10 @@ h2 {
 }
 
 h1 {
-    margin-bottom: 22px;
+    margin-bottom: 18px;
     max-width: 980px;
-    font-size: clamp(3.5rem, 8vw, 8.4rem);
-    line-height: 0.9;
+    font-size: clamp(3.5rem, 7vw, 7.2rem);
+    line-height: 0.95;
     font-family: var(--font-display);
     font-weight: 400;
 }
@@ -196,8 +196,8 @@ h1 {
 h2 {
     margin-bottom: 18px;
     max-width: 760px;
-    font-size: clamp(2.7rem, 5vw, 6rem);
-    line-height: 0.9;
+    font-size: clamp(2.7rem, 4.6vw, 5.2rem);
+    line-height: 0.95;
     font-family: var(--font-display);
     font-weight: 400;
 }
@@ -211,15 +211,15 @@ h3 {
 p {
     color: var(--color-text-muted);
     font-size: 1rem;
-    line-height: 1.65;
+    line-height: 1.6;
 }
 
 .split-heading {
     display: grid;
     grid-template-columns: minmax(0, 1.25fr) minmax(260px, 0.75fr);
-    gap: 40px;
+    gap: 32px;
     align-items: end;
-    margin-bottom: 46px;
+    margin-bottom: 34px;
 }
 
 .split-heading>p {
