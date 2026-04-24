@@ -1,35 +1,43 @@
-/* ================= SERVICES HERO ================= */
+/* ================= SERVICES HERO — COMPACT LUX ================= */
 
 .services-hero {
     position: relative;
-    padding: clamp(90px, 10vw, 150px) 0 clamp(70px, 8vw, 120px);
+    padding: clamp(84px, 8vw, 118px) 0 clamp(48px, 6vw, 76px);
     overflow: hidden;
     background:
-        radial-gradient(circle at 82% 18%, rgba(184, 154, 99, 0.16), transparent 28rem),
+        radial-gradient(circle at 78% 18%, rgba(210, 186, 141, 0.14), transparent 28rem),
+        radial-gradient(circle at 8% 86%, rgba(255, 255, 255, 0.055), transparent 22rem),
         linear-gradient(180deg, #101217, #151922);
 }
 
 .services-hero::before {
     content: "";
     position: absolute;
-    inset: 28px;
+    inset: 22px;
     border: 1px solid var(--color-line);
-    border-radius: 42px;
+    border-radius: 34px;
     pointer-events: none;
 }
 
-.services-hero-grid {
+.services-hero-shell {
     position: relative;
     z-index: 2;
     display: grid;
-    grid-template-columns: minmax(0, 0.95fr) minmax(320px, 0.85fr);
-    gap: clamp(34px, 6vw, 90px);
+    grid-template-columns: minmax(0, 0.92fr) minmax(320px, 0.78fr);
+    gap: clamp(28px, 5vw, 64px);
     align-items: center;
 }
 
+.services-hero-copy h1 {
+    max-width: 760px;
+    margin-bottom: 18px;
+    font-size: clamp(3.2rem, 6.4vw, 6.9rem);
+}
+
 .services-hero-copy p:not(.eyebrow) {
-    max-width: 640px;
-    margin-bottom: 28px;
+    max-width: 590px;
+    margin-bottom: 24px;
+    font-size: clamp(1rem, 1.12vw, 1.1rem);
 }
 
 .services-hero-actions {
@@ -38,67 +46,91 @@
     gap: 12px;
 }
 
-.services-hero-panel {
+.services-hero-visual {
     position: relative;
+    min-height: 420px;
 }
 
-.services-hero-image {
-    aspect-ratio: 1 / 1;
-    overflow: hidden;
-    border: 1px solid var(--color-line-strong);
-    border-radius: 38px;
-    background: var(--color-surface);
-    box-shadow: var(--shadow-soft);
-}
-
-.services-hero-image img {
-    width: 100%;
-    height: 100%;
-    transition: transform 0.75s var(--ease);
-}
-
-.services-hero-panel:hover .services-hero-image img {
-    transform: scale(1.06);
-}
-
-.services-mini-card {
+.services-hero-visual img {
     position: absolute;
-    left: -34px;
-    bottom: 34px;
-    width: min(310px, 80%);
-    display: grid;
-    grid-template-columns: 46px 1fr;
-    gap: 14px;
-    align-items: center;
-    padding: 18px;
+    right: 0;
+    top: 0;
+    width: 86%;
+    height: 100%;
+    border: 1px solid var(--color-line-strong);
+    border-radius: 32px;
+    box-shadow: var(--shadow-soft);
+    transition:
+        transform 0.8s var(--ease),
+        filter 0.8s var(--ease);
+}
+
+.services-hero-visual:hover img {
+    transform: scale(1.035);
+    filter: saturate(1.08) contrast(1.04);
+}
+
+.hero-visual-card {
+    position: absolute;
+    z-index: 3;
     border: 1px solid rgba(210, 186, 141, 0.34);
-    border-radius: 24px;
     background:
-        linear-gradient(135deg, rgba(210, 186, 141, 0.15), rgba(255, 255, 255, 0.05)),
-        rgba(15, 17, 21, 0.82);
+        linear-gradient(135deg, rgba(210, 186, 141, 0.16), rgba(255, 255, 255, 0.04)),
+        rgba(15, 17, 21, 0.84);
     backdrop-filter: blur(18px);
     box-shadow: var(--shadow-card);
 }
 
-.services-mini-card svg {
-    width: 46px;
-    height: 46px;
-    padding: 12px;
-    border-radius: 16px;
+.hero-visual-card-main {
+    left: 0;
+    bottom: 40px;
+    width: 190px;
+    min-height: 150px;
+    display: grid;
+    align-content: end;
+    padding: 20px;
+    border-radius: 26px;
+}
+
+.hero-visual-card-main strong {
     color: var(--color-gold-soft);
-    background: rgba(255, 255, 255, 0.07);
+    font-family: var(--font-display);
+    font-size: 5.2rem;
+    line-height: 0.78;
+    font-weight: 400;
 }
 
-.services-mini-card strong {
-    display: block;
+.hero-visual-card-main span {
     color: var(--color-ivory);
+    font-weight: 800;
+    line-height: 1.25;
 }
 
-.services-mini-card span {
-    display: block;
-    margin-top: 3px;
+.hero-visual-card-note {
+    right: 18px;
+    bottom: 18px;
+    width: min(320px, 78%);
+    display: grid;
+    grid-template-columns: 42px 1fr;
+    gap: 12px;
+    align-items: center;
+    padding: 16px;
+    border-radius: 22px;
+}
+
+.hero-visual-card-note svg {
+    width: 42px;
+    height: 42px;
+    padding: 11px;
+    border-radius: 15px;
+    color: var(--color-gold-soft);
+    background: rgba(210, 186, 141, 0.1);
+}
+
+.hero-visual-card-note span {
     color: var(--color-text-muted);
     font-size: 0.86rem;
+    line-height: 1.45;
 }
 
 /* ================= SERVICES DIRECTORY ================= */
@@ -239,13 +271,14 @@
     transform: translate(4px, -4px);
 }
 
-/* ================= COMPARE STRIP ================= */
+/* ================= COMPARE STRIP — LUX BOARD ================= */
 
 .compare-strip {
     position: relative;
     overflow: hidden;
     background:
         radial-gradient(circle at 12% 20%, rgba(210, 186, 141, 0.12), transparent 30rem),
+        radial-gradient(circle at 92% 74%, rgba(255, 255, 255, 0.055), transparent 26rem),
         #101217;
 }
 
@@ -258,47 +291,102 @@
     pointer-events: none;
 }
 
-.compare-strip-grid {
+.compare-luxury-grid {
     position: relative;
     z-index: 2;
     display: grid;
-    grid-template-columns: minmax(0, 0.86fr) minmax(320px, 1.14fr);
-    gap: clamp(36px, 6vw, 80px);
-    align-items: start;
+    grid-template-columns: minmax(0, 0.82fr) minmax(340px, 1.18fr);
+    gap: clamp(36px, 6vw, 86px);
+    align-items: center;
 }
 
-.compare-points {
+.compare-luxury-copy p:not(.eyebrow) {
+    max-width: 600px;
+    margin-bottom: 28px;
+}
+
+.compare-luxury-board {
     display: grid;
+    grid-template-columns: 0.95fr 1.05fr;
     gap: 14px;
 }
 
-.compare-points article {
+.compare-luxury-card {
+    position: relative;
+    min-height: 250px;
     display: grid;
-    grid-template-columns: 52px 1fr;
-    gap: 18px;
+    align-content: end;
     padding: 24px;
+    overflow: hidden;
     border: 1px solid var(--color-line);
-    border-radius: 26px;
+    border-radius: 30px;
     background:
-        linear-gradient(145deg, rgba(255, 255, 255, 0.065), rgba(255, 255, 255, 0.025)),
+        linear-gradient(145deg, rgba(255, 255, 255, 0.07), rgba(255, 255, 255, 0.025)),
         var(--color-surface);
     box-shadow: var(--shadow-card);
+    transition:
+        transform 0.38s var(--ease),
+        border-color 0.38s var(--ease),
+        background 0.38s var(--ease);
 }
 
-.compare-points svg {
-    width: 52px;
-    height: 52px;
+.compare-luxury-card.is-large {
+    grid-row: span 2;
+    min-height: 516px;
+    background:
+        linear-gradient(180deg, rgba(5, 6, 8, 0.18), rgba(5, 6, 8, 0.9)),
+        url("../assets/images/services/services-cta.jpg") center/cover;
+}
+
+.compare-luxury-card::before {
+    content: "";
+    position: absolute;
+    inset: 18px;
+    border: 1px solid rgba(255, 255, 255, 0.12);
+    border-radius: 22px;
+    opacity: 0;
+    transform: scale(0.96);
+    transition: 0.38s var(--ease);
+}
+
+.compare-luxury-card:hover {
+    transform: translateY(-6px);
+    border-color: rgba(210, 186, 141, 0.5);
+}
+
+.compare-luxury-card:hover::before {
+    opacity: 1;
+    transform: scale(1);
+}
+
+.compare-number {
+    position: absolute;
+    top: 20px;
+    right: 22px;
+    color: rgba(210, 186, 141, 0.38);
+    font-family: var(--font-display);
+    font-size: 5.4rem;
+    line-height: 0.8;
+}
+
+.compare-luxury-card i,
+.compare-luxury-card svg {
+    width: 54px;
+    height: 54px;
+    margin-bottom: 26px;
     padding: 14px;
     border-radius: 18px;
     color: var(--color-gold-soft);
-    background: rgba(210, 186, 141, 0.1);
+    background: rgba(210, 186, 141, 0.12);
 }
 
-.compare-points h3 {
+.compare-luxury-card h3 {
     color: var(--color-ivory);
+    font-size: clamp(1.35rem, 2vw, 2.15rem);
 }
 
-.compare-points p {
+.compare-luxury-card p {
+    max-width: 360px;
     margin: 0;
 }
 
@@ -366,13 +454,13 @@
 
 @media (max-width: 1100px) {
 
-    .services-hero-grid,
-    .compare-strip-grid {
+    .services-hero-shell,
+    .compare-luxury-grid {
         grid-template-columns: 1fr;
     }
 
-    .services-hero-panel {
-        max-width: 640px;
+    .services-hero-visual {
+        max-width: 720px;
     }
 
     .services-card-grid {
@@ -407,9 +495,35 @@
         width: 100%;
     }
 
-    .services-mini-card {
-        left: 16px;
-        bottom: 16px;
+    .services-hero-visual {
+        min-height: auto;
+        display: grid;
+        gap: 14px;
+    }
+
+    .services-hero-visual img,
+    .hero-visual-card,
+    .hero-visual-card-main,
+    .hero-visual-card-note {
+        position: relative;
+        inset: auto;
+        width: 100%;
+    }
+
+    .services-hero-visual img {
+        height: auto;
+        aspect-ratio: 1 / 1;
+        border-radius: 28px;
+    }
+
+    .compare-luxury-board {
+        grid-template-columns: 1fr;
+    }
+
+    .compare-luxury-card,
+    .compare-luxury-card.is-large {
+        min-height: 280px;
+        grid-row: auto;
     }
 
     .services-card-grid {
@@ -419,10 +533,6 @@
     .service-directory-card {
         min-height: 390px;
         border-radius: 26px;
-    }
-
-    .compare-points article {
-        grid-template-columns: 1fr;
     }
 
     .services-cta-box {
@@ -438,14 +548,6 @@
 
     .services-filter button {
         width: 100%;
-    }
-
-    .services-hero-image {
-        border-radius: 28px;
-    }
-
-    .services-mini-card {
-        width: calc(100% - 32px);
     }
 
     .services-cta-box .btn {

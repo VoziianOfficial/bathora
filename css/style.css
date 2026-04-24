@@ -354,14 +354,20 @@ p {
 
 .header-search {
     height: 48px;
-    display: grid;
-    grid-template-columns: 20px 1fr;
-    gap: 10px;
+    display: flex;
     align-items: center;
+    gap: 10px;
     padding: 0 16px;
-    border: 1px solid var(--color-line);
+
     border-radius: 999px;
+    border: 1px solid var(--color-line);
+
     background: rgba(255, 255, 255, 0.035);
+    backdrop-filter: blur(10px);
+
+    transition: border-color 0.3s var(--ease),
+        background 0.3s var(--ease);
+        font-family: var(--font-main);
 }
 
 .header-search svg {
@@ -369,15 +375,23 @@ p {
     color: var(--color-text-muted);
 }
 
-.header-search input {
-    color: var(--color-text);
-    background: transparent;
-    font-size: 0.92rem;
+.header-search input,
+.header-search input:focus,
+.header-search input:focus-visible {
+    min-height: auto;
+    padding: 0;
+    border: 0 !important;
+    outline: none !important;
+    background: transparent !important;
+    box-shadow: none !important;
+    
 }
 
-.header-search input::placeholder {
-    color: rgba(246, 242, 234, 0.45);
+.header-search:focus-within {
+    border-color: var(--color-line);
+    background: rgba(255, 255, 255, 0.035);
 }
+
 
 .header-actions {
     display: flex;

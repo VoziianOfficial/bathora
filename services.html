@@ -19,7 +19,6 @@
         rel="stylesheet" />
 
     <script src="https://unpkg.com/lucide@latest"></script>
-
     <link rel="stylesheet" href="css/style.css" />
 </head>
 
@@ -95,37 +94,35 @@
             <div class="menu-contact-card">
                 <span>Need provider options?</span>
                 <a href="tel:+18776248472" data-phone-link data-phone-label>Call Now</a>
-                <a href="mailto:hello@bathora.com" data-email-text>hello@bathora.com</a>
+                <a href="mailto:hello@bathora.com" data-email-link data-email-text>hello@bathora.com</a>
             </div>
         </div>
     </div>
 
     <a class="mobile-callbar" href="tel:+18776248472" data-phone-link>
         <i data-lucide="phone-call"></i>
-        <span data-phone-label>Call Now</span>
+        <span data-mobile-dynamic-cta>Call Now</span>
     </a>
 
     <main id="main">
-        <!-- ================= SERVICES HERO ================= -->
         <section class="services-hero">
-            <div class="container services-hero-grid">
+            <div class="container services-hero-shell">
                 <div class="services-hero-copy">
                     <p class="eyebrow">
                         <span></span>
                         Bathroom Provider Categories
                     </p>
 
-                    <h1>Compare bathroom options by project type.</h1>
+                    <h1>Bathroom service paths, curated for better provider comparison.</h1>
 
                     <p>
-                        Bathora organizes common bathroom projects into clear categories so
-                        homeowners can review local provider options without assuming every
-                        company handles every scope.
+                        Bathora helps homeowners sort bathroom projects by scope before
+                        requesting options from independent local providers.
                     </p>
 
                     <div class="services-hero-actions">
                         <a class="btn btn-gold" href="contact.html">
-                            Request Provider Options
+                            <span data-dynamic-cta>Request Options</span>
                             <i data-lucide="arrow-up-right"></i>
                         </a>
 
@@ -135,24 +132,23 @@
                     </div>
                 </div>
 
-                <div class="services-hero-panel">
-                    <div class="services-hero-image">
-                        <img src="assets/images/services/services-hero.jpg"
-                            alt="Premium bathroom interior with modern fixtures" />
+                <div class="services-hero-visual">
+                    <img src="assets/images/services/services-hero.jpg"
+                        alt="Premium bathroom interior with modern fixtures" />
+
+                    <div class="hero-visual-card hero-visual-card-main">
+                        <strong>6</strong>
+                        <span>Bathroom service paths</span>
                     </div>
 
-                    <div class="services-mini-card">
-                        <i data-lucide="layout-grid"></i>
-                        <div>
-                            <strong>6 service paths</strong>
-                            <span>One comparison-first structure</span>
-                        </div>
+                    <div class="hero-visual-card hero-visual-card-note">
+                        <i data-lucide="shield-check"></i>
+                        <span>Independent providers. Homeowner verifies before hiring.</span>
                     </div>
                 </div>
             </div>
         </section>
 
-        <!-- ================= SERVICE DIRECTORY ================= -->
         <section class="section services-directory" id="service-directory">
             <div class="container">
                 <div class="section-heading split-heading">
@@ -245,42 +241,68 @@
             </div>
         </section>
 
-        <!-- ================= COMPARE STRIP ================= -->
         <section class="section compare-strip">
-            <div class="container compare-strip-grid">
-                <div>
+            <div class="container compare-luxury-grid">
+                <div class="compare-luxury-copy">
                     <p class="eyebrow">
                         <span></span>
                         Why Compare
                     </p>
-                    <h2>Bathroom providers can differ by scope, timing, and materials.</h2>
+
+                    <h2>Not every bathroom provider is suited for the same project.</h2>
+
+                    <p>
+                        A full remodel, a shower update, a tub replacement, tile work, and
+                        a repair request can each require a different type of company.
+                        Bathora keeps those paths separated so the first conversation starts cleaner.
+                    </p>
+
+                    <a class="btn btn-gold" href="contact.html">
+                        <span data-dynamic-cta>Request Options</span>
+                        <i data-lucide="arrow-up-right"></i>
+                    </a>
                 </div>
 
-                <div class="compare-points">
-                    <article>
-                        <i data-lucide="ruler"></i>
-                        <h3>Project scope</h3>
-                        <p>Some companies focus on full remodels, while others handle fixture or surface-focused work.
-                        </p>
+                <div class="compare-luxury-board">
+                    <article class="compare-luxury-card is-large">
+                        <span class="compare-number">01</span>
+                        <div>
+                            <i data-lucide="ruler"></i>
+                            <h3>Scope first</h3>
+                            <p>
+                                Separate full remodels from fixture updates, surface work,
+                                and repair-focused requests.
+                            </p>
+                        </div>
                     </article>
 
-                    <article>
-                        <i data-lucide="calendar-clock"></i>
-                        <h3>Availability</h3>
-                        <p>Provider timelines may vary by area, season, project size, and material availability.</p>
+                    <article class="compare-luxury-card">
+                        <span class="compare-number">02</span>
+                        <div>
+                            <i data-lucide="calendar-clock"></i>
+                            <h3>Timing matters</h3>
+                            <p>
+                                Availability may shift by ZIP code, project size, materials,
+                                and provider coverage.
+                            </p>
+                        </div>
                     </article>
 
-                    <article>
-                        <i data-lucide="badge-check"></i>
-                        <h3>Verification</h3>
-                        <p>Homeowners should review licensing, insurance, quote details, and company policies before
-                            hiring.</p>
+                    <article class="compare-luxury-card">
+                        <span class="compare-number">03</span>
+                        <div>
+                            <i data-lucide="badge-check"></i>
+                            <h3>Verify clearly</h3>
+                            <p>
+                                Review license, insurance, quotes, warranty terms, and written
+                                scope before hiring.
+                            </p>
+                        </div>
                     </article>
                 </div>
             </div>
         </section>
 
-        <!-- ================= CTA ================= -->
         <section class="section services-cta">
             <div class="container services-cta-box">
                 <div>
@@ -296,13 +318,12 @@
                 </div>
 
                 <a class="btn btn-gold" href="contact.html">
-                    Start Request
+                    <span data-dynamic-cta>Request Options</span>
                     <i data-lucide="arrow-up-right"></i>
                 </a>
             </div>
         </section>
 
-        <!-- ================= FAQ ================= -->
         <section class="section faq-section">
             <div class="container faq-grid">
                 <div>
@@ -348,47 +369,6 @@
                     </details>
                 </div>
             </div>
-
-            <script type="application/ld+json">
-        {
-          "@context": "https://schema.org",
-          "@type": "FAQPage",
-          "mainEntity": [
-            {
-              "@type": "Question",
-              "name": "How do I know which category to choose?",
-              "acceptedAnswer": {
-                "@type": "Answer",
-                "text": "Choose the category closest to your main project goal. If your project includes several areas, bathroom remodeling is usually the broadest category."
-              }
-            },
-            {
-              "@type": "Question",
-              "name": "Does every provider handle every bathroom service?",
-              "acceptedAnswer": {
-                "@type": "Answer",
-                "text": "No. Independent companies may specialize in different project types, materials, or service areas."
-              }
-            },
-            {
-              "@type": "Question",
-              "name": "Can I request quotes for more than one category?",
-              "acceptedAnswer": {
-                "@type": "Answer",
-                "text": "Yes. If your project includes multiple needs, describe them clearly when submitting your request."
-              }
-            },
-            {
-              "@type": "Question",
-              "name": "What should I verify before hiring?",
-              "acceptedAnswer": {
-                "@type": "Answer",
-                "text": "Verify license, insurance, written quote details, warranty terms, timing, and the company’s service area."
-              }
-            }
-          ]
-        }
-      </script>
         </section>
     </main>
 
@@ -461,9 +441,10 @@
             <p data-disclaimer>
                 Disclaimer: This site is a free service to assist homeowners in connecting with local service providers.
                 All contractors/providers are independent and this site does not warrant or guarantee any work
-                performed. It is the responsibility of the homeowner to verify that the hired contractor furnishes the
-                necessary license and insurance required for the work being performed. All persons depicted in a photo
-                or video are actors or models and not contractors listed on this site.
+                performed.
+                It is the responsibility of the homeowner to verify that the hired contractor furnishes the necessary
+                license and insurance required for the work being performed. All persons depicted in a photo or video
+                are actors or models and not contractors listed on this site.
             </p>
         </div>
 
@@ -482,6 +463,7 @@
     </footer>
 
     <script src="js/settings.js"></script>
+    <script src="js/site-content.js"></script>
     <script src="js/main.js"></script>
     <script src="js/services.js"></script>
 </body>
