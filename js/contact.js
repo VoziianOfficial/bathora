@@ -1,6 +1,6 @@
 "use strict";
 
-/* ================= CONTACT REVEAL ================= */
+
 
 function initContactReveal() {
     const items = document.querySelectorAll(
@@ -28,7 +28,7 @@ function initContactReveal() {
     items.forEach((item) => observer.observe(item));
 }
 
-/* ================= MAP HOVER ================= */
+
 
 function initMapHover() {
     const mapFrame = document.querySelector(".map-frame");
@@ -52,7 +52,7 @@ function initMapHover() {
     });
 }
 
-/* ================= FIELD STATES ================= */
+
 
 function initContactFieldStates() {
     const form = document.querySelector(".contact-form");
@@ -79,7 +79,7 @@ function prefersReducedMotionContact() {
     return window.matchMedia("(prefers-reduced-motion: reduce)").matches;
 }
 
-/* ================= INIT ================= */
+
 
 document.addEventListener("DOMContentLoaded", () => {
     initContactReveal();

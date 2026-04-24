@@ -1,0 +1,27 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="64" height="64" viewBox="0 0 64 64" role="img" aria-label="Bathora favicon">
+  <defs>
+    <linearGradient id="bg" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#0E1015"/>
+      <stop offset="1" stop-color="#191D24"/>
+    </linearGradient>
+    <linearGradient id="gold" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0" stop-color="#E4D1A8"/>
+      <stop offset="1" stop-color="#B89463"/>
+    </linearGradient>
+  </defs>
+
+  <rect x="4" y="4" width="56" height="56" rx="14" fill="url(#bg)"/>
+
+  <!-- Minimal bathtub icon (reads well at small sizes) -->
+  <g fill="none" stroke="url(#gold)" stroke-width="4.2" stroke-linecap="round" stroke-linejoin="round">
+    <path d="M18 33c0-4.2 3.4-7.6 7.6-7.6h12.8c4.2 0 7.6 3.4 7.6 7.6"/>
+    <path d="M16 33h32c0 8.8-6.7 15-16 15S16 41.8 16 33Z"/>
+    <path d="M20.5 48v3.6"/>
+    <path d="M43.5 48v3.6"/>
+  </g>
+
+  <!-- small sparkle -->
+  <g fill="url(#gold)" opacity="0.95">
+    <path d="M47 16l1.4 3.4L52 21l-3.6 1.6L47 26l-1.4-3.4L42 21l3.6-1.6L47 16Z"/>
+  </g>
+</svg>

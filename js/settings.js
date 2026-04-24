@@ -1,6 +1,6 @@
 "use strict";
 
-/* ================= GLOBAL SITE CONFIG ================= */
+
 
 const SITE_CONFIG = {
     companyName: "Bathora",

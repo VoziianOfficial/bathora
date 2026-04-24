@@ -1,6 +1,6 @@
 "use strict";
 
-/* ================= SERVICES FILTER ================= */
+
 
 function initServicesFilter() {
     const buttons = document.querySelectorAll("[data-service-filter]");
@@ -25,7 +25,7 @@ function initServicesFilter() {
     });
 }
 
-/* ================= SERVICES REVEAL ================= */
+
 
 function initServicesReveal() {
     const items = document.querySelectorAll(
@@ -53,7 +53,7 @@ function initServicesReveal() {
     items.forEach((item) => observer.observe(item));
 }
 
-/* ================= SERVICES IMAGE TILT ================= */
+
 
 function initServicesTilt() {
     const cards = document.querySelectorAll(".service-directory-card");
@@ -81,7 +81,7 @@ function prefersReducedMotionServices() {
     return window.matchMedia("(prefers-reduced-motion: reduce)").matches;
 }
 
-/* ================= INIT ================= */
+
 
 document.addEventListener("DOMContentLoaded", () => {
     initServicesFilter();

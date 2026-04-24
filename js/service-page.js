@@ -1,6 +1,6 @@
 "use strict";
 
-/* ================= SERVICE PAGE REVEAL ================= */
+
 
 function initServicePageReveal() {
     const items = document.querySelectorAll(
@@ -28,7 +28,7 @@ function initServicePageReveal() {
     items.forEach((item) => observer.observe(item));
 }
 
-/* ================= SERVICE HERO PARALLAX ================= */
+
 
 function initServiceHeroParallax() {
     const image = document.querySelector(".service-hero-bg img");
@@ -44,7 +44,7 @@ function initServiceHeroParallax() {
     window.addEventListener("scroll", move, { passive: true });
 }
 
-/* ================= SERVICE FACTOR TILT ================= */
+
 
 function initServiceFactorTilt() {
     const cards = document.querySelectorAll(".service-factor-grid article");
@@ -72,7 +72,7 @@ function prefersReducedMotionServicePage() {
     return window.matchMedia("(prefers-reduced-motion: reduce)").matches;
 }
 
-/* ================= INIT ================= */
+
 
 document.addEventListener("DOMContentLoaded", () => {
     initServicePageReveal();

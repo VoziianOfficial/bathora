@@ -1,6 +1,6 @@
 "use strict";
 
-/* ================= ICONS ================= */
+
 
 function initIcons() {
     if (window.lucide) {
@@ -8,7 +8,7 @@ function initIcons() {
     }
 }
 
-/* ================= HEADER SCROLL ================= */
+
 
 function initStickyHeader() {
     const header = document.querySelector("[data-header]");
@@ -22,7 +22,7 @@ function initStickyHeader() {
     window.addEventListener("scroll", toggleHeaderState, { passive: true });
 }
 
-/* ================= MENU ================= */
+
 
 function initMenu() {
     const openBtn = document.querySelector("[data-menu-open]");
@@ -64,7 +64,7 @@ function initMenu() {
     });
 }
 
-/* ================= COOKIE BANNER ================= */
+
 
 function initCookieBanner() {
     const banner = document.querySelector("[data-cookie-banner]");
@@ -89,7 +89,7 @@ function initCookieBanner() {
     declineBtn.addEventListener("click", () => saveChoice("declined"));
 }
 
-/* ================= FORM VALIDATION ================= */
+
 
 function initForms() {
     const forms = document.querySelectorAll("[data-quote-form]");
@@ -137,7 +137,7 @@ function initForms() {
     });
 }
 
-/* ================= SEARCH ================= */
+
 
 function initHeaderSearch() {
     const searchInput = document.querySelector(".header-search input");
@@ -185,7 +185,7 @@ function initHeaderSearch() {
     });
 }
 
-/* ================= DETAILS UX ================= */
+
 
 function initFaqDetails() {
     const faqLists = document.querySelectorAll(".faq-list");
@@ -207,7 +207,7 @@ function initFaqDetails() {
     });
 }
 
-/* ================= SMART STICKY CTA ================= */
+
 
 function initSmartStickyCTA() {
     const stickyCta = document.querySelector("[data-smart-sticky-cta]");
@@ -226,7 +226,7 @@ function initSmartStickyCTA() {
     window.addEventListener("scroll", toggleStickyCTA, { passive: true });
 }
 
-/* ================= CTA RIPPLE ================= */
+
 
 function initCTARipple() {
     const buttons = document.querySelectorAll(".btn-gold");
@@ -249,7 +249,7 @@ function initCTARipple() {
     });
 }
 
-/* ================= INIT ================= */
+
 
 document.addEventListener("DOMContentLoaded", () => {
     initIcons();

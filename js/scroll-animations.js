@@ -1,6 +1,6 @@
 "use strict";
 
-/* ================= GSAP SCROLL ANIMATIONS ================= */
+
 
 function initScrollAnimations() {
     if (typeof gsap === "undefined" || typeof ScrollTrigger === "undefined") return;

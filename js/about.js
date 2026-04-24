@@ -1,6 +1,6 @@
 "use strict";
 
-/* ================= ABOUT REVEAL ================= */
+
 
 function initAboutReveal() {
     const items = document.querySelectorAll(
@@ -12,6 +12,11 @@ function initAboutReveal() {
     items.forEach((item) => {
         item.classList.add("about-reveal");
     });
+
+    if (!("IntersectionObserver" in window)) {
+        items.forEach((item) => item.classList.add("is-visible"));
+        return;
+    }
 
     const observer = new IntersectionObserver(
         (entries, obs) => {
@@ -28,7 +33,7 @@ function initAboutReveal() {
     items.forEach((item) => observer.observe(item));
 }
 
-/* ================= ABOUT PARALLAX ================= */
+
 
 function initAboutParallax() {
     const mainCard = document.querySelector(".portrait-card-main");
@@ -59,7 +64,7 @@ function prefersReducedMotionAbout() {
     return window.matchMedia("(prefers-reduced-motion: reduce)").matches;
 }
 
-/* ================= INIT ================= */
+
 
 document.addEventListener("DOMContentLoaded", () => {
     initAboutReveal();

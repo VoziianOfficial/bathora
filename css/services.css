@@ -1,4 +1,4 @@
-/* ================= SERVICES HERO — COMPACT LUX ================= */
+
 
 .services-hero {
     position: relative;
@@ -133,7 +133,7 @@
     line-height: 1.45;
 }
 
-/* ================= SERVICES DIRECTORY ================= */
+
 
 .services-directory {
     background:
@@ -271,7 +271,7 @@
     transform: translate(4px, -4px);
 }
 
-/* ================= COMPARE STRIP — LUX BOARD ================= */
+
 
 .compare-strip {
     position: relative;
@@ -390,7 +390,7 @@
     margin: 0;
 }
 
-/* ================= SERVICES CTA ================= */
+
 
 .services-cta {
     background:
@@ -435,7 +435,7 @@
     margin-bottom: 0;
 }
 
-/* ================= SERVICES REVEAL ================= */
+
 
 .services-reveal {
     opacity: 0;
@@ -450,7 +450,7 @@
     transform: translateY(0);
 }
 
-/* ================= RESPONSIVE ================= */
+
 
 @media (max-width: 1100px) {
 

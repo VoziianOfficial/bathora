@@ -1,4 +1,4 @@
-/* ================= SERVICE HERO ================= */
+
 
 .service-hero {
     position: relative;
@@ -74,7 +74,7 @@
     margin: 0;
 }
 
-/* ================= SERVICE INTRO ================= */
+
 
 .service-intro {
     background: linear-gradient(180deg, var(--color-bg), var(--color-bg-soft));
@@ -104,7 +104,7 @@
     margin-bottom: 0;
 }
 
-/* ================= EVALUATION ================= */
+
 
 .service-evaluation {
     background:
@@ -155,7 +155,7 @@
     font-size: 0.94rem;
 }
 
-/* ================= FORM SECTION ================= */
+
 
 .service-form-section {
     background:
@@ -187,7 +187,7 @@
     max-width: 580px;
 }
 
-/* ================= SERVICE REVEAL ================= */
+
 
 .service-reveal {
     opacity: 0;
@@ -202,7 +202,7 @@
     transform: translateY(0);
 }
 
-/* ================= RESPONSIVE ================= */
+
 
 @media (max-width: 1100px) {
 

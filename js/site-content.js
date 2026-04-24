@@ -1,6 +1,6 @@
 "use strict";
 
-/* ================= HELPERS ================= */
+
 
 function getCurrentPageName() {
     return window.location.pathname.split("/").pop() || "index.html";
@@ -18,7 +18,7 @@ function getConfigValue(group, fallback = "") {
     );
 }
 
-/* ================= APPLY BASIC CONFIG ================= */
+
 
 function applySiteContent() {
     if (typeof SITE_CONFIG === "undefined") return;
@@ -72,7 +72,7 @@ function applySiteContent() {
     });
 }
 
-/* ================= APPLY DYNAMIC CTA ================= */
+
 
 function applyDynamicCTA() {
     const desktopCta = getConfigValue("ctaByPage", "Request Options");
@@ -92,7 +92,7 @@ function applyDynamicCTA() {
     });
 }
 
-/* ================= INIT ================= */
+
 
 document.addEventListener("DOMContentLoaded", () => {
     applySiteContent();

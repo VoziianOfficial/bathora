@@ -1,4 +1,4 @@
-/* ================= CONTACT HERO ================= */
+
 
 .contact-hero {
     position: relative;
@@ -25,9 +25,24 @@
     grid-template-columns: minmax(0, 0.9fr) minmax(320px, 0.85fr);
     gap: clamp(34px, 6vw, 90px);
     align-items: start;
+    isolation: isolate;
+    padding: clamp(18px, 3vw, 34px);
+    border-radius: 38px;
+    overflow: hidden;
 }
 
-/* ================= CONTACT COPY ================= */
+.contact-hero-grid::before {
+    content: "";
+    position: absolute;
+    inset: 0;
+    z-index: -1;
+    background:
+        linear-gradient(0deg, rgba(16, 18, 23, 0.82), rgba(16, 18, 23, 0.44)),
+        url("../assets/images/services/contact-bg.jpg") center/cover no-repeat;
+    filter: saturate(1.05) contrast(1.05);
+}
+
+
 
 .contact-copy p:not(.eyebrow) {
     max-width: 600px;
@@ -77,7 +92,7 @@
     color: var(--color-ivory);
 }
 
-/* ================= FORM ================= */
+
 
 .contact-form {
     position: relative;
@@ -100,7 +115,7 @@
     width: 16px;
 }
 
-/* ================= MAP ================= */
+
 
 .contact-map-section {
     background:
@@ -114,7 +129,7 @@
     align-items: center;
 }
 
-/* LEFT SIDE */
+
 
 .map-copy p {
     max-width: 520px;
@@ -141,7 +156,7 @@
     color: var(--color-gold-soft);
 }
 
-/* RIGHT SIDE MAP */
+
 
 .map-frame {
     position: relative;
@@ -159,7 +174,7 @@
     filter: grayscale(1) contrast(1.1);
 }
 
-/* TOP BAR */
+
 
 .map-topline {
     position: absolute;
@@ -183,7 +198,7 @@
     color: var(--color-gold-soft);
 }
 
-/* FLOATING PIN CARD */
+
 
 .map-pin-card {
     position: absolute;
@@ -219,7 +234,7 @@
     color: var(--color-text-muted);
 }
 
-/* ================= STEPS ================= */
+
 
 .contact-steps {
     background:
@@ -264,7 +279,7 @@
     margin: 0;
 }
 
-/* ================= RESPONSIVE ================= */
+
 
 @media (max-width: 1100px) {
 
@@ -285,6 +300,10 @@
 
     .contact-hero::before {
         inset: 12px;
+        border-radius: 28px;
+    }
+
+    .contact-hero-grid {
         border-radius: 28px;
     }
 

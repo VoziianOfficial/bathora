@@ -1,6 +1,6 @@
 "use strict";
 
-/* ================= LEGAL REVEAL ================= */
+
 
 function initLegalReveal() {
     const items = document.querySelectorAll(
@@ -26,7 +26,7 @@ function initLegalReveal() {
     items.forEach(el => observer.observe(el));
 }
 
-/* ================= SMOOTH SCROLL ================= */
+
 
 function initLegalNavScroll() {
     const links = document.querySelectorAll(".legal-nav a");
@@ -50,7 +50,7 @@ function initLegalNavScroll() {
     });
 }
 
-/* ================= INIT ================= */
+
 
 document.addEventListener("DOMContentLoaded", () => {
     initLegalReveal();

@@ -1,6 +1,6 @@
 "use strict";
 
-/* ================= HOME COUNTERS ================= */
+
 
 function initHomeCounters() {
     const counters = document.querySelectorAll("[data-counter]");
@@ -44,7 +44,7 @@ function initHomeCounters() {
     counters.forEach((counter) => observer.observe(counter));
 }
 
-/* ================= HOME REVEAL ================= */
+
 
 function initHomeReveal() {
     const items = document.querySelectorAll(
@@ -72,7 +72,7 @@ function initHomeReveal() {
     items.forEach((item) => observer.observe(item));
 }
 
-/* ================= HOME PARALLAX ================= */
+
 
 function initHeroParallax() {
     const heroImage = document.querySelector(".hero-bg img");
@@ -95,7 +95,7 @@ function initHeroParallax() {
     window.addEventListener("scroll", handleScroll, { passive: true });
 }
 
-/* ================= IMAGE CARDS MAGNET ================= */
+
 
 function initCardHoverTilt() {
     const cards = document.querySelectorAll(".image-card");
@@ -121,7 +121,7 @@ function initCardHoverTilt() {
     });
 }
 
-/* ================= FORM VISUAL STATE ================= */
+
 
 function initFormVisualState() {
     const forms = document.querySelectorAll("[data-quote-form]");
@@ -145,13 +145,13 @@ function initFormVisualState() {
     });
 }
 
-/* ================= REDUCE MOTION ================= */
+
 
 function prefersReducedMotion() {
     return window.matchMedia("(prefers-reduced-motion: reduce)").matches;
 }
 
-/* ================= INIT ================= */
+
 
 document.addEventListener("DOMContentLoaded", () => {
     initHomeCounters();

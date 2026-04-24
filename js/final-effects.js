@@ -1,6 +1,6 @@
 "use strict";
 
-/* ================= IMAGE REVEAL MASK ================= */
+
 
 function initRevealMasks() {
     if (typeof gsap === "undefined" || typeof ScrollTrigger === "undefined") return;
@@ -22,7 +22,7 @@ function initRevealMasks() {
     });
 }
 
-/* ================= HORIZONTAL SHOWCASE ================= */
+
 
 function initHorizontalShowcase() {
     if (typeof gsap === "undefined" || typeof ScrollTrigger === "undefined") return;
@@ -50,7 +50,7 @@ function initHorizontalShowcase() {
     });
 }
 
-/* ================= FINAL INIT ================= */
+
 
 document.addEventListener("DOMContentLoaded", () => {
     const reducedMotion = window.matchMedia("(prefers-reduced-motion: reduce)").matches;

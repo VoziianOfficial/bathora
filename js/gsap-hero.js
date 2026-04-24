@@ -1,6 +1,6 @@
 "use strict";
 
-/* ================= GSAP HERO ANIMATION ================= */
+
 
 function initGsapHero() {
     if (typeof gsap === "undefined") return;
@@ -119,7 +119,7 @@ function initGsapHero() {
     }
 }
 
-/* ================= HERO MOUSE PARALLAX ================= */
+
 
 function initHeroMouseParallax() {
     if (typeof gsap === "undefined") return;
@@ -171,7 +171,7 @@ function initHeroMouseParallax() {
     });
 }
 
-/* ================= INIT ================= */
+
 
 document.addEventListener("DOMContentLoaded", () => {
     const reducedMotion = window.matchMedia("(prefers-reduced-motion: reduce)").matches;
