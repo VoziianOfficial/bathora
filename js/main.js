@@ -99,20 +99,53 @@ function initForms() {
     forms.forEach((form) => {
         const message = form.querySelector("[data-form-message]");
 
+        const escapeName = (value) => {
+            if (window.CSS && typeof window.CSS.escape === "function") {
+                return window.CSS.escape(value);
+            }
+
+            return value.replace(/"/g, '\\"');
+        };
+
         form.addEventListener("submit", (event) => {
             event.preventDefault();
 
             const requiredFields = form.querySelectorAll("[required]");
             let isValid = true;
+            const processedRadioNames = new Set();
 
             requiredFields.forEach((field) => {
                 const isCheckbox = field.type === "checkbox";
-                const emptyField = !isCheckbox && !field.value.trim();
                 const uncheckedBox = isCheckbox && !field.checked;
+                const isRadio = field.type === "radio";
+                const emptyField = !isCheckbox && !isRadio && !field.value.trim();
 
                 field.classList.remove("is-invalid");
 
-                if (emptyField || uncheckedBox) {
+                if (isRadio) {
+                    if (processedRadioNames.has(field.name)) return;
+
+                    processedRadioNames.add(field.name);
+                    const name = escapeName(field.name);
+                    const group = form.querySelectorAll(`input[type="radio"][name="${name}"]`);
+                    const anyChecked = Array.from(group).some((radio) => radio.checked);
+
+                    group.forEach((radio) => radio.classList.remove("is-invalid"));
+
+                    if (!anyChecked) {
+                        isValid = false;
+                        group.forEach((radio) => radio.classList.add("is-invalid"));
+                    }
+
+                    return;
+                }
+
+                const badValue =
+                    emptyField ||
+                    uncheckedBox ||
+                    (field.value.trim() && typeof field.checkValidity === "function" && !field.checkValidity());
+
+                if (badValue) {
                     isValid = false;
                     field.classList.add("is-invalid");
                 }

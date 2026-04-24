@@ -767,12 +767,38 @@ textarea:focus {
     font-size: 0.9rem;
 }
 
+.form-message:empty {
+    display: none;
+}
+
 .form-message.is-success {
     color: #a8d4a2;
 }
 
 .form-message.is-error {
     color: #ff9d93;
+}
+
+.multistep-form.is-submitted .form-progress,
+.multistep-form.is-submitted [data-form-step] {
+    display: none;
+}
+
+.multistep-form.is-submitted .form-message {
+    display: block;
+    margin-top: 0;
+    padding: 14px 16px;
+    border: 1px solid rgba(168, 212, 162, 0.22);
+    border-radius: 18px;
+    background: rgba(168, 212, 162, 0.08);
+}
+
+.form-submit-reset {
+    margin-top: 12px;
+}
+
+.multistep-form:not(.is-submitted) .form-submit-reset {
+    display: none;
 }
 
 

@@ -5,7 +5,7 @@
     min-height: calc(100vh - var(--header-height));
     display: grid;
     align-items: end;
-    padding: clamp(90px, 10vw, 150px) 0 34px;
+    padding: clamp(60px, 10vw, 150px) 0 clamp(180px, 14vw, 320px);
     overflow: hidden;
 }
 
@@ -514,6 +514,7 @@
     .home-hero {
         min-height: auto;
         padding-top: 84px;
+        padding-bottom: 34px;
     }
 
     .hero-info-card {
