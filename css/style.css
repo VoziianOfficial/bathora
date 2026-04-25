@@ -2128,3 +2128,233 @@ textarea:focus {
         grid-template-columns: 1fr;
     }
 }
+
+/* =====================================================
+   CATEGORY HELP — PREMIUM COMPACT REDESIGN
+   Works for services.html + all service pages
+===================================================== */
+
+.category-help-section {
+    padding: clamp(46px, 5vw, 74px) 0 !important;
+    background:
+        radial-gradient(circle at 8% 12%, rgba(210, 186, 141, 0.09), transparent 28rem),
+        linear-gradient(180deg, #111419, #0f1115) !important;
+}
+
+.category-help-section::before {
+    display: none !important;
+}
+
+.category-help-grid,
+.service-page-help .category-help-grid {
+    display: grid !important;
+    grid-template-columns: minmax(320px, 0.95fr) minmax(0, 1.25fr) !important;
+    gap: 18px !important;
+    align-items: stretch !important;
+}
+
+.category-help-copy,
+.category-help-grid>div:first-child {
+    min-height: auto !important;
+    padding: clamp(24px, 3vw, 34px) !important;
+    border-radius: 24px !important;
+    border: 1px solid rgba(210, 186, 141, 0.18) !important;
+    background:
+        linear-gradient(145deg, rgba(255, 255, 255, 0.055), rgba(255, 255, 255, 0.02)),
+        #1a1d23 !important;
+    box-shadow: none !important;
+}
+
+.category-help-copy h2,
+.category-help-grid h2 {
+    max-width: 620px !important;
+    margin-bottom: 14px !important;
+    font-size: clamp(2.35rem, 4vw, 4rem) !important;
+    line-height: 0.92 !important;
+    letter-spacing: -0.04em !important;
+}
+
+.category-help-copy p:not(.eyebrow),
+.category-help-grid p:not(.eyebrow) {
+    max-width: 620px !important;
+    margin: 0 0 14px !important;
+    color: rgba(246, 242, 234, 0.68) !important;
+    font-size: 0.94rem !important;
+    line-height: 1.6 !important;
+}
+
+.category-help-note {
+    margin-top: 18px !important;
+    display: grid !important;
+    grid-template-columns: 42px 1fr !important;
+    gap: 12px !important;
+    align-items: center !important;
+    padding: 14px !important;
+    border-radius: 16px !important;
+    border: 1px solid rgba(210, 186, 141, 0.24) !important;
+    background: rgba(210, 186, 141, 0.08) !important;
+}
+
+.category-help-note svg,
+.category-help-note i {
+    width: 40px !important;
+    height: 40px !important;
+    padding: 10px !important;
+    margin: 0 !important;
+    border-radius: 50% !important;
+    color: var(--color-gold-soft) !important;
+    background: rgba(210, 186, 141, 0.12) !important;
+}
+
+.category-help-note strong {
+    display: block !important;
+    color: var(--color-ivory) !important;
+    font-size: 0.9rem !important;
+    line-height: 1.25 !important;
+}
+
+.category-help-note span {
+    display: block !important;
+    margin-top: 3px !important;
+    color: rgba(246, 242, 234, 0.62) !important;
+    font-size: 0.82rem !important;
+    line-height: 1.45 !important;
+}
+
+.category-help-cards {
+    display: grid !important;
+    grid-template-columns: 1fr !important;
+    gap: 10px !important;
+}
+
+.category-help-cards article {
+    min-height: auto !important;
+    display: grid !important;
+    grid-template-columns: 42px 52px minmax(0, 1fr) auto !important;
+    gap: 14px !important;
+    align-items: center !important;
+    padding: 18px 20px !important;
+    border-radius: 20px !important;
+    border: 1px solid rgba(210, 186, 141, 0.14) !important;
+    background:
+        linear-gradient(145deg, rgba(255, 255, 255, 0.055), rgba(255, 255, 255, 0.018)),
+        #1a1d23 !important;
+    box-shadow: none !important;
+    transition: border-color 0.25s var(--ease), background 0.25s var(--ease) !important;
+}
+
+.category-help-cards article:hover {
+    transform: none !important;
+    border-color: rgba(210, 186, 141, 0.38) !important;
+    background:
+        linear-gradient(145deg, rgba(210, 186, 141, 0.075), rgba(255, 255, 255, 0.02)),
+        #1b1f26 !important;
+}
+
+.category-help-cards article>span {
+    position: static !important;
+    width: 36px !important;
+    height: 36px !important;
+    display: grid !important;
+    place-items: center !important;
+    border-radius: 50% !important;
+    background: linear-gradient(135deg, var(--color-gold-soft), var(--color-gold)) !important;
+    color: #111318 !important;
+    font-size: 0.72rem !important;
+    font-weight: 900 !important;
+}
+
+.category-help-cards article>svg,
+.category-help-cards article>i {
+    width: 48px !important;
+    height: 48px !important;
+    padding: 12px !important;
+    margin: 0 !important;
+    border-radius: 16px !important;
+    color: var(--color-gold-soft) !important;
+    background:
+        radial-gradient(circle at 30% 18%, rgba(255, 255, 255, 0.14), transparent 35%),
+        #111318 !important;
+}
+
+.category-help-cards article::after {
+    content: "→";
+    color: var(--color-gold-soft);
+    font-size: 1.3rem;
+    opacity: 0.85;
+}
+
+.category-help-cards h3 {
+    margin: 0 0 6px !important;
+    color: var(--color-ivory) !important;
+    font-family: var(--font-main) !important;
+    font-size: 1.05rem !important;
+    line-height: 1.2 !important;
+    letter-spacing: -0.02em !important;
+    font-weight: 900 !important;
+}
+
+.category-help-cards p {
+    max-width: 560px !important;
+    margin: 0 !important;
+    color: rgba(246, 242, 234, 0.62) !important;
+    font-size: 0.88rem !important;
+    line-height: 1.48 !important;
+}
+
+/* нижний компактный ряд, если хочешь как на макете */
+.category-help-grid::after {
+    content: "Better matches  ·  More accuracy  ·  Save time  ·  Add details if you are not sure";
+    grid-column: 1 / -1;
+    padding: 16px 20px;
+    border-radius: 18px;
+    border: 1px solid rgba(210, 186, 141, 0.14);
+    background: rgba(255, 255, 255, 0.035);
+    color: rgba(246, 242, 234, 0.72);
+    font-size: 0.9rem;
+    line-height: 1.5;
+}
+
+/* Tablet */
+@media (max-width: 1100px) {
+
+    .category-help-grid,
+    .service-page-help .category-help-grid {
+        grid-template-columns: 1fr !important;
+    }
+}
+
+/* Mobile */
+@media (max-width: 640px) {
+
+    .category-help-copy,
+    .category-help-grid>div:first-child {
+        padding: 22px 18px !important;
+        border-radius: 22px !important;
+    }
+
+    .category-help-copy h2,
+    .category-help-grid h2 {
+        font-size: clamp(2.2rem, 13vw, 3.4rem) !important;
+    }
+
+    .category-help-cards article {
+        grid-template-columns: 36px 1fr !important;
+        gap: 12px !important;
+        padding: 16px !important;
+    }
+
+    .category-help-cards article>svg,
+    .category-help-cards article>i,
+    .category-help-cards article::after {
+        display: none !important;
+    }
+
+    .category-help-note {
+        grid-template-columns: 1fr !important;
+    }
+
+    .category-help-grid::after {
+        font-size: 0.84rem;
+    }
+}
