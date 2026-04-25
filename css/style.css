@@ -1867,3 +1867,264 @@ textarea:focus {
         border-radius: 24px;
     }
 }
+
+
+/* =========================================================
+   REDESIGNED CONTENT SECTIONS — added by ChatGPT
+   Applies to category-help-section, contact-context-section,
+   and service-page help blocks.
+========================================================= */
+
+.category-help-section,
+.contact-context-section {
+    position: relative;
+    overflow: hidden;
+    background:
+        radial-gradient(circle at 8% 12%, rgba(210, 186, 141, 0.12), transparent 28rem),
+        radial-gradient(circle at 92% 16%, rgba(255, 255, 255, 0.06), transparent 26rem),
+        linear-gradient(180deg, var(--color-bg-soft), var(--color-bg));
+}
+
+.category-help-section::before,
+.contact-context-section::before {
+    content: "";
+    position: absolute;
+    inset: 18px;
+    border: 1px solid rgba(210, 186, 141, 0.08);
+    border-radius: clamp(28px, 4vw, 48px);
+    pointer-events: none;
+}
+
+.category-help-grid,
+.contact-context-shell {
+    position: relative;
+    z-index: 1;
+    display: grid;
+    grid-template-columns: minmax(0, 0.92fr) minmax(0, 1.08fr);
+    gap: clamp(22px, 4vw, 54px);
+    align-items: stretch;
+}
+
+.category-help-copy,
+.contact-context-copy {
+    min-width: 0;
+    padding: clamp(26px, 4vw, 54px);
+    border: 1px solid rgba(210, 186, 141, 0.16);
+    border-radius: clamp(24px, 3vw, 36px);
+    background:
+        radial-gradient(circle at 12% 0%, rgba(210, 186, 141, 0.14), transparent 34%),
+        linear-gradient(145deg, rgba(255, 255, 255, 0.075), rgba(255, 255, 255, 0.03));
+    box-shadow: 0 22px 70px rgba(0, 0, 0, 0.16);
+    backdrop-filter: blur(18px);
+}
+
+.category-help-copy h2,
+.contact-context-copy h2 {
+    max-width: 760px;
+    font-size: clamp(2.05rem, 4vw, 4.45rem);
+    line-height: 1.02;
+    letter-spacing: -0.055em;
+}
+
+.category-help-copy p:not(.eyebrow),
+.contact-context-copy p:not(.eyebrow) {
+    max-width: 760px;
+    margin-top: 18px;
+    color: var(--color-text-muted);
+    font-size: clamp(0.96rem, 1.2vw, 1.08rem);
+    line-height: 1.75;
+}
+
+.category-help-note {
+    margin-top: clamp(20px, 3vw, 34px);
+    display: grid;
+    grid-template-columns: 46px 1fr;
+    gap: 14px;
+    align-items: center;
+    padding: 18px;
+    border-radius: 22px;
+    background: rgba(210, 186, 141, 0.1);
+    border: 1px solid rgba(210, 186, 141, 0.18);
+}
+
+.category-help-note svg {
+    width: 46px;
+    height: 46px;
+    padding: 12px;
+    border-radius: 50%;
+    color: var(--color-gold-soft);
+    background: rgba(210, 186, 141, 0.12);
+}
+
+.category-help-note strong {
+    display: block;
+    color: var(--color-ivory);
+    font-size: 1rem;
+}
+
+.category-help-note span {
+    display: block;
+    margin-top: 4px;
+    color: var(--color-text-muted);
+    line-height: 1.55;
+}
+
+.category-help-cards,
+.contact-context-list {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 14px;
+}
+
+.category-help-cards article,
+.contact-context-list article {
+    min-width: 0;
+    display: grid;
+    grid-template-columns: 54px 70px minmax(0, 1fr);
+    gap: 18px;
+    align-items: center;
+    min-height: 150px;
+    padding: clamp(18px, 2.4vw, 28px);
+    border: 1px solid rgba(210, 186, 141, 0.13);
+    border-radius: 28px;
+    background:
+        linear-gradient(145deg, rgba(255, 255, 255, 0.075), rgba(255, 255, 255, 0.028)),
+        rgba(255, 255, 255, 0.02);
+    box-shadow: 0 18px 55px rgba(0, 0, 0, 0.13);
+    transition: transform 0.35s var(--ease), border-color 0.35s var(--ease);
+}
+
+.category-help-cards article:hover,
+.contact-context-list article:hover {
+    transform: translateY(-4px);
+    border-color: rgba(210, 186, 141, 0.38);
+}
+
+.category-help-cards article > span {
+    width: 44px;
+    height: 44px;
+    display: grid;
+    place-items: center;
+    border-radius: 50%;
+    background: linear-gradient(135deg, var(--color-gold), #8f6d3c);
+    color: #111318;
+    font-size: 0.82rem;
+    font-weight: 900;
+}
+
+.category-help-cards article > svg,
+.contact-context-list article > svg {
+    width: 66px;
+    height: 66px;
+    padding: 17px;
+    border-radius: 22px;
+    color: var(--color-gold-soft);
+    background:
+        radial-gradient(circle at 30% 18%, rgba(255, 255, 255, 0.16), transparent 35%),
+        #111318;
+    box-shadow: 0 16px 34px rgba(0, 0, 0, 0.24);
+}
+
+.category-help-cards h3,
+.contact-context-list span {
+    display: block;
+    margin: 0;
+    color: var(--color-ivory);
+    font-family: var(--font-heading);
+    font-size: clamp(1.05rem, 1.5vw, 1.35rem);
+    line-height: 1.15;
+    letter-spacing: -0.03em;
+    font-weight: 800;
+}
+
+.category-help-cards p,
+.contact-context-list p {
+    margin: 8px 0 0;
+    color: var(--color-text-muted);
+    font-size: 0.96rem;
+    line-height: 1.55;
+}
+
+/* Contact context has no number span, so use two-column card layout */
+.contact-context-list article {
+    grid-template-columns: 70px minmax(0, 1fr);
+}
+
+.contact-context-list article > svg {
+    grid-row: span 2;
+}
+
+/* Service detail pages: keep this section slightly more compact */
+.service-page-help .category-help-grid {
+    grid-template-columns: minmax(0, 1fr) minmax(0, 1.05fr);
+}
+
+.service-page-help .category-help-cards article {
+    min-height: 138px;
+}
+
+/* Responsive */
+@media (max-width: 1100px) {
+    .category-help-grid,
+    .contact-context-shell,
+    .service-page-help .category-help-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .category-help-cards {
+        grid-template-columns: repeat(3, minmax(0, 1fr));
+    }
+
+    .category-help-cards article {
+        grid-template-columns: 1fr;
+        align-content: start;
+    }
+
+    .category-help-cards article > span {
+        position: absolute;
+        top: 18px;
+        right: 18px;
+    }
+}
+
+@media (max-width: 760px) {
+    .category-help-section::before,
+    .contact-context-section::before {
+        inset: 8px;
+        border-radius: 26px;
+    }
+
+    .category-help-copy,
+    .contact-context-copy {
+        padding: 24px 18px;
+        border-radius: 24px;
+    }
+
+    .category-help-cards,
+    .contact-context-list {
+        grid-template-columns: 1fr;
+    }
+
+    .category-help-cards article,
+    .contact-context-list article {
+        grid-template-columns: 1fr;
+        min-height: auto;
+        padding: 22px;
+        border-radius: 24px;
+    }
+
+    .contact-context-list article > svg {
+        grid-row: auto;
+    }
+
+    .category-help-cards article > svg,
+    .contact-context-list article > svg {
+        width: 58px;
+        height: 58px;
+        padding: 15px;
+    }
+
+    .category-help-note {
+        grid-template-columns: 1fr;
+    }
+}
