@@ -1662,9 +1662,6 @@ textarea:focus {
     font-variant-numeric: tabular-nums;
 }
 
-/* ===============================
-   EXTRA CONTENT SECTIONS
-================================ */
 .content-depth-section,
 .homeowner-guide-section,
 .category-help-section,
@@ -1873,11 +1870,6 @@ textarea:focus {
 }
 
 
-/* =========================================================
-   REDESIGNED CONTENT SECTIONS — added by ChatGPT
-   Applies to category-help-section, contact-context-section,
-   and service-page help blocks.
-========================================================= */
 
 .category-help-section,
 .contact-context-section {
@@ -2049,7 +2041,7 @@ textarea:focus {
     line-height: 1.55;
 }
 
-/* Contact context has no number span, so use two-column card layout */
+
 .contact-context-list article {
     grid-template-columns: 70px minmax(0, 1fr);
 }
@@ -2058,7 +2050,7 @@ textarea:focus {
     grid-row: span 2;
 }
 
-/* Service detail pages: keep this section slightly more compact */
+
 .service-page-help .category-help-grid {
     grid-template-columns: minmax(0, 1fr) minmax(0, 1.05fr);
 }
@@ -2067,7 +2059,7 @@ textarea:focus {
     min-height: 138px;
 }
 
-/* Responsive */
+
 @media (max-width: 1100px) {
     .category-help-grid,
     .contact-context-shell,
@@ -2133,10 +2125,7 @@ textarea:focus {
     }
 }
 
-/* =====================================================
-   CATEGORY HELP — PREMIUM COMPACT REDESIGN
-   Works for services.html + all service pages
-===================================================== */
+
 
 .category-help-section {
     padding: clamp(46px, 5vw, 74px) 0 !important;
@@ -2306,7 +2295,7 @@ textarea:focus {
     line-height: 1.48 !important;
 }
 
-/* нижний компактный ряд, если хочешь как на макете */
+
 .category-help-grid::after {
     content: "Better matches  ·  More accuracy  ·  Save time  ·  Add details if you are not sure";
     grid-column: 1 / -1;
@@ -2319,7 +2308,7 @@ textarea:focus {
     line-height: 1.5;
 }
 
-/* Tablet */
+
 @media (max-width: 1100px) {
 
     .category-help-grid,
@@ -2328,7 +2317,7 @@ textarea:focus {
     }
 }
 
-/* Mobile */
+
 @media (max-width: 640px) {
 
     .category-help-copy,
@@ -2363,9 +2352,7 @@ textarea:focus {
     }
 }
 
-/* ===============================
-   SERVICE DETAIL EXTRA CARDS FIX
-================================ */
+
 
 .service-detail-extra-cards {
     display: grid;
@@ -2442,9 +2429,7 @@ textarea:focus {
     }
 }
 
-/* ===============================
-   GLOBAL COMPACT SECTIONS
-================================ */
+
 
 .section {
     padding-top: clamp(34px, 3.5vw, 60px) !important;
@@ -2477,4 +2462,32 @@ textarea:focus {
         padding-top: 76px !important;
         padding-bottom: 34px !important;
     }
+}
+
+.service-factor-grid article {
+    position: relative;
+    align-content: start !important;
+    padding: 26px 24px 24px !important;
+}
+
+.service-factor-grid article i,
+.service-factor-grid article svg {
+    position: absolute;
+    top: 22px;
+    right: 22px;
+    width: 42px !important;
+    height: 42px !important;
+    margin: 0 !important;
+    padding: 10px !important;
+}
+
+.service-factor-grid h3 {
+    max-width: 75%;
+    margin: 0 0 18px;
+}
+
+.service-factor-grid p {
+    margin-top: auto;
+    font-size: 0.92rem;
+    line-height: 1.65;
 }
