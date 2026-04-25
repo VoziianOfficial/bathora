@@ -5,8 +5,10 @@
     padding: clamp(90px, 10vw, 150px) 0 clamp(70px, 8vw, 120px);
     overflow: hidden;
     background:
-        radial-gradient(circle at 80% 20%, rgba(184, 154, 99, 0.15), transparent 30rem),
-        linear-gradient(180deg, #101217, #171a1f);
+            linear-gradient(180deg, rgba(16, 18, 23, 0.55), rgba(21, 25, 34, 0.7)),
+            radial-gradient(circle at 78% 18%, rgba(210, 186, 141, 0.08), transparent 28rem),
+            radial-gradient(circle at 8% 86%, rgba(255, 255, 255, 0.04), transparent 22rem),
+            url("../assets/images/services/services-cta.jpg") center/cover no-repeat;
 }
 
 .contact-hero::before {
@@ -36,9 +38,6 @@
     position: absolute;
     inset: 0;
     z-index: -1;
-    background:
-        linear-gradient(0deg, rgba(16, 18, 23, 0.82), rgba(16, 18, 23, 0.44)),
-        url("../assets/images/services/contact-bg.jpg") center/cover no-repeat;
     filter: saturate(1.05) contrast(1.05);
 }
 

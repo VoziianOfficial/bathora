@@ -2441,3 +2441,40 @@ textarea:focus {
         max-width: 72%;
     }
 }
+
+/* ===============================
+   GLOBAL COMPACT SECTIONS
+================================ */
+
+.section {
+    padding-top: clamp(34px, 3.5vw, 60px) !important;
+    padding-bottom: clamp(34px, 3.5vw, 60px) !important;
+}
+
+.category-help-section {
+    padding-top: clamp(30px, 3vw, 42px) !important;
+    padding-bottom: clamp(30px, 3vw, 42px) !important;
+}
+
+.contact-hero,
+.services-hero,
+.service-hero,
+.home-hero {
+    padding-top: clamp(70px, 7vw, 95px) !important;
+    padding-bottom: clamp(34px, 4vw, 60px) !important;
+}
+
+@media (max-width: 820px) {
+    .section {
+        padding-top: 38px !important;
+        padding-bottom: 38px !important;
+    }
+
+    .contact-hero,
+    .services-hero,
+    .service-hero,
+    .home-hero {
+        padding-top: 76px !important;
+        padding-bottom: 34px !important;
+    }
+}
